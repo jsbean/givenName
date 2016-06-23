@@ -16,9 +16,8 @@ final class InstructionsViewController: NSViewController {
     // var instrumentKind: InstrumentKind!
     
     override func loadView() {
-        let mainWindow = NSApplication.sharedApplication().windows[0]
         self.view = NSView()
-        self.view.frame = mainWindow.frame
+        self.view.frame = NSApplication.sharedApplication().windows[0].contentView!.frame
         self.view.wantsLayer = true
         self.view.layer!.backgroundColor = NSColor.blackColor().CGColor
     }
