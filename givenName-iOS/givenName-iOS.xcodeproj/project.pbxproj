@@ -38,6 +38,7 @@
 		076671621D1C589E002181B1 = {
 			isa = PBXGroup;
 			children = (
+				0766719C1D1C5987002181B1 /* Frameworks */,
 				0766716D1D1C589E002181B1 /* givenName-iOS */,
 				0766716C1D1C589E002181B1 /* Products */,
 			);
@@ -62,6 +63,13 @@
 				0766717A1D1C589E002181B1 /* Info.plist */,
 			);
 			path = "givenName-iOS";
+			sourceTree = "<group>";
+		};
+		0766719C1D1C5987002181B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +299,7 @@
 				0766717F1D1C589E002181B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

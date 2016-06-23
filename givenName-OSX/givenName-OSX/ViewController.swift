@@ -10,11 +10,9 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Do any additional setup after loading the view.
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     override var representedObject: AnyObject? {
         didSet {

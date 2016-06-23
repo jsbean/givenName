@@ -7,13 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07347A221D1C60AD0040457E /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A121D1C60AD0040457E /* ArithmeticTools.framework */; };
+		07347A231D1C60AD0040457E /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A131D1C60AD0040457E /* ArrayTools.framework */; };
+		07347A241D1C60AD0040457E /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A141D1C60AD0040457E /* Color.framework */; };
+		07347A251D1C60AD0040457E /* DictionaryTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A151D1C60AD0040457E /* DictionaryTools.framework */; };
+		07347A261D1C60AD0040457E /* EnsembleTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A161D1C60AD0040457E /* EnsembleTools.framework */; };
+		07347A271D1C60AD0040457E /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A171D1C60AD0040457E /* EnumTools.framework */; };
+		07347A281D1C60AD0040457E /* Graph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A181D1C60AD0040457E /* Graph.framework */; };
+		07347A291D1C60AD0040457E /* GraphicsTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A191D1C60AD0040457E /* GraphicsTools.framework */; };
+		07347A2A1D1C60AD0040457E /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1A1D1C60AD0040457E /* PathTools.framework */; };
+		07347A2B1D1C60AD0040457E /* PeerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1B1D1C60AD0040457E /* PeerKit.framework */; };
+		07347A2C1D1C60AD0040457E /* Pitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1C1D1C60AD0040457E /* Pitch.framework */; };
+		07347A2D1D1C60AD0040457E /* PitchSpellingTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1D1D1C60AD0040457E /* PitchSpellingTools.framework */; };
+		07347A2E1D1C60AD0040457E /* Staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1E1D1C60AD0040457E /* Staff.framework */; };
+		07347A2F1D1C60AD0040457E /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1F1D1C60AD0040457E /* StringTools.framework */; };
+		07347A301D1C60AD0040457E /* Timeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A201D1C60AD0040457E /* Timeline.framework */; };
+		07347A311D1C60AD0040457E /* TreeTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A211D1C60AD0040457E /* TreeTools.framework */; };
+		07347A321D1C60CD0040457E /* ArithmeticTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A121D1C60AD0040457E /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A331D1C60CD0040457E /* ArrayTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A131D1C60AD0040457E /* ArrayTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A341D1C60CD0040457E /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A141D1C60AD0040457E /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A351D1C60CD0040457E /* DictionaryTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A151D1C60AD0040457E /* DictionaryTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A361D1C60CD0040457E /* EnsembleTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A161D1C60AD0040457E /* EnsembleTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A371D1C60CD0040457E /* EnumTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A171D1C60AD0040457E /* EnumTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A381D1C60CD0040457E /* Graph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A181D1C60AD0040457E /* Graph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A391D1C60CD0040457E /* GraphicsTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A191D1C60AD0040457E /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A3A1D1C60CD0040457E /* PathTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1A1D1C60AD0040457E /* PathTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A3B1D1C60CD0040457E /* PeerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1B1D1C60AD0040457E /* PeerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A3C1D1C60CD0040457E /* Pitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1C1D1C60AD0040457E /* Pitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A3D1D1C60CD0040457E /* PitchSpellingTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1D1D1C60AD0040457E /* PitchSpellingTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A3E1D1C60CD0040457E /* Staff.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1E1D1C60AD0040457E /* Staff.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A3F1D1C60CD0040457E /* StringTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A1F1D1C60AD0040457E /* StringTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A401D1C60CD0040457E /* Timeline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A201D1C60AD0040457E /* Timeline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07347A411D1C60CD0040457E /* TreeTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A211D1C60AD0040457E /* TreeTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0766718D1D1C58B9002181B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766718C1D1C58B9002181B1 /* AppDelegate.swift */; };
 		0766718F1D1C58B9002181B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766718E1D1C58B9002181B1 /* ViewController.swift */; };
 		076671911D1C58B9002181B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076671901D1C58B9002181B1 /* Assets.xcassets */; };
 		076671941D1C58B9002181B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076671921D1C58B9002181B1 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		076671FD1D1C59F6002181B1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07347A321D1C60CD0040457E /* ArithmeticTools.framework in Embed Frameworks */,
+				07347A331D1C60CD0040457E /* ArrayTools.framework in Embed Frameworks */,
+				07347A341D1C60CD0040457E /* Color.framework in Embed Frameworks */,
+				07347A351D1C60CD0040457E /* DictionaryTools.framework in Embed Frameworks */,
+				07347A361D1C60CD0040457E /* EnsembleTools.framework in Embed Frameworks */,
+				07347A371D1C60CD0040457E /* EnumTools.framework in Embed Frameworks */,
+				07347A381D1C60CD0040457E /* Graph.framework in Embed Frameworks */,
+				07347A391D1C60CD0040457E /* GraphicsTools.framework in Embed Frameworks */,
+				07347A3A1D1C60CD0040457E /* PathTools.framework in Embed Frameworks */,
+				07347A3B1D1C60CD0040457E /* PeerKit.framework in Embed Frameworks */,
+				07347A3C1D1C60CD0040457E /* Pitch.framework in Embed Frameworks */,
+				07347A3D1D1C60CD0040457E /* PitchSpellingTools.framework in Embed Frameworks */,
+				07347A3E1D1C60CD0040457E /* Staff.framework in Embed Frameworks */,
+				07347A3F1D1C60CD0040457E /* StringTools.framework in Embed Frameworks */,
+				07347A401D1C60CD0040457E /* Timeline.framework in Embed Frameworks */,
+				07347A411D1C60CD0040457E /* TreeTools.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		07347A121D1C60AD0040457E /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = Carthage/Build/Mac/ArithmeticTools.framework; sourceTree = "<group>"; };
+		07347A131D1C60AD0040457E /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
+		07347A141D1C60AD0040457E /* Color.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Color.framework; path = Carthage/Build/Mac/Color.framework; sourceTree = "<group>"; };
+		07347A151D1C60AD0040457E /* DictionaryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DictionaryTools.framework; path = Carthage/Build/Mac/DictionaryTools.framework; sourceTree = "<group>"; };
+		07347A161D1C60AD0040457E /* EnsembleTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnsembleTools.framework; path = Carthage/Build/Mac/EnsembleTools.framework; sourceTree = "<group>"; };
+		07347A171D1C60AD0040457E /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = Carthage/Build/Mac/EnumTools.framework; sourceTree = "<group>"; };
+		07347A181D1C60AD0040457E /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graph.framework; path = Carthage/Build/Mac/Graph.framework; sourceTree = "<group>"; };
+		07347A191D1C60AD0040457E /* GraphicsTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTools.framework; path = Carthage/Build/Mac/GraphicsTools.framework; sourceTree = "<group>"; };
+		07347A1A1D1C60AD0040457E /* PathTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PathTools.framework; path = Carthage/Build/Mac/PathTools.framework; sourceTree = "<group>"; };
+		07347A1B1D1C60AD0040457E /* PeerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PeerKit.framework; path = Carthage/Build/Mac/PeerKit.framework; sourceTree = "<group>"; };
+		07347A1C1D1C60AD0040457E /* Pitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pitch.framework; path = Carthage/Build/Mac/Pitch.framework; sourceTree = "<group>"; };
+		07347A1D1D1C60AD0040457E /* PitchSpellingTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PitchSpellingTools.framework; path = Carthage/Build/Mac/PitchSpellingTools.framework; sourceTree = "<group>"; };
+		07347A1E1D1C60AD0040457E /* Staff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Staff.framework; path = Carthage/Build/Mac/Staff.framework; sourceTree = "<group>"; };
+		07347A1F1D1C60AD0040457E /* StringTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringTools.framework; path = Carthage/Build/Mac/StringTools.framework; sourceTree = "<group>"; };
+		07347A201D1C60AD0040457E /* Timeline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timeline.framework; path = Carthage/Build/Mac/Timeline.framework; sourceTree = "<group>"; };
+		07347A211D1C60AD0040457E /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/Mac/TreeTools.framework; sourceTree = "<group>"; };
 		076671891D1C58B9002181B1 /* givenName-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "givenName-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0766718C1D1C58B9002181B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0766718E1D1C58B9002181B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +104,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07347A311D1C60AD0040457E /* TreeTools.framework in Frameworks */,
+				07347A251D1C60AD0040457E /* DictionaryTools.framework in Frameworks */,
+				07347A2C1D1C60AD0040457E /* Pitch.framework in Frameworks */,
+				07347A231D1C60AD0040457E /* ArrayTools.framework in Frameworks */,
+				07347A241D1C60AD0040457E /* Color.framework in Frameworks */,
+				07347A281D1C60AD0040457E /* Graph.framework in Frameworks */,
+				07347A2A1D1C60AD0040457E /* PathTools.framework in Frameworks */,
+				07347A301D1C60AD0040457E /* Timeline.framework in Frameworks */,
+				07347A271D1C60AD0040457E /* EnumTools.framework in Frameworks */,
+				07347A291D1C60AD0040457E /* GraphicsTools.framework in Frameworks */,
+				07347A221D1C60AD0040457E /* ArithmeticTools.framework in Frameworks */,
+				07347A261D1C60AD0040457E /* EnsembleTools.framework in Frameworks */,
+				07347A2E1D1C60AD0040457E /* Staff.framework in Frameworks */,
+				07347A2F1D1C60AD0040457E /* StringTools.framework in Frameworks */,
+				07347A2B1D1C60AD0040457E /* PeerKit.framework in Frameworks */,
+				07347A2D1D1C60AD0040457E /* PitchSpellingTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +129,7 @@
 		076671801D1C58B9002181B1 = {
 			isa = PBXGroup;
 			children = (
+				0766719B1D1C5980002181B1 /* Frameworks */,
 				0766718B1D1C58B9002181B1 /* givenName-OSX */,
 				0766718A1D1C58B9002181B1 /* Products */,
 			);
@@ -61,6 +155,29 @@
 			path = "givenName-OSX";
 			sourceTree = "<group>";
 		};
+		0766719B1D1C5980002181B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07347A121D1C60AD0040457E /* ArithmeticTools.framework */,
+				07347A131D1C60AD0040457E /* ArrayTools.framework */,
+				07347A141D1C60AD0040457E /* Color.framework */,
+				07347A151D1C60AD0040457E /* DictionaryTools.framework */,
+				07347A161D1C60AD0040457E /* EnsembleTools.framework */,
+				07347A171D1C60AD0040457E /* EnumTools.framework */,
+				07347A181D1C60AD0040457E /* Graph.framework */,
+				07347A191D1C60AD0040457E /* GraphicsTools.framework */,
+				07347A1A1D1C60AD0040457E /* PathTools.framework */,
+				07347A1B1D1C60AD0040457E /* PeerKit.framework */,
+				07347A1C1D1C60AD0040457E /* Pitch.framework */,
+				07347A1D1D1C60AD0040457E /* PitchSpellingTools.framework */,
+				07347A1E1D1C60AD0040457E /* Staff.framework */,
+				07347A1F1D1C60AD0040457E /* StringTools.framework */,
+				07347A201D1C60AD0040457E /* Timeline.framework */,
+				07347A211D1C60AD0040457E /* TreeTools.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +188,8 @@
 				076671851D1C58B9002181B1 /* Sources */,
 				076671861D1C58B9002181B1 /* Frameworks */,
 				076671871D1C58B9002181B1 /* Resources */,
+				076671FD1D1C59F6002181B1 /* Embed Frameworks */,
+				07347A431D1C615A0040457E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,6 +244,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07347A431D1C615A0040457E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/ArrayTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/DictionaryTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/TreeTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/EnsembleTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/EnumTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Graph.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PeerKit.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Pitch.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PitchSpellingTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Staff.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/StringTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Timeline.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/TreeTools.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		076671851D1C58B9002181B1 /* Sources */ = {
@@ -236,10 +388,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "givenName-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bean.givenName-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -249,10 +406,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "givenName-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bean.givenName-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -277,6 +439,7 @@
 				0766719A1D1C58B9002181B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
