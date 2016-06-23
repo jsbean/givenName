@@ -1,0 +1,10 @@
+framework module Pitch {
+  umbrella header "Pitch.h"
+
+  export *
+  module * { export * }
+}
+
+module Pitch.Swift {
+    header "Pitch-Swift.h"
+}

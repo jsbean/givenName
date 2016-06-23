@@ -1,0 +1,10 @@
+framework module PitchSpellingTools {
+  umbrella header "PitchSpellingTools.h"
+
+  export *
+  module * { export * }
+}
+
+module PitchSpellingTools.Swift {
+    header "PitchSpellingTools-Swift.h"
+}

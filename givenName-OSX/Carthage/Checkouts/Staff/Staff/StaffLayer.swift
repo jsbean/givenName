@@ -47,7 +47,15 @@ public final class StaffLayer: CALayer, GraphType, StaffSpaceConfigurable {
     }
     
     public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        self.identifier = "staff"
+        self.staffSpaceHeight = 20
+        super.init(coder: aDecoder)
+    }
+    
+    public override init(layer: AnyObject) {
+        self.identifier = "staff"
+        self.staffSpaceHeight = 20
+        super.init(layer: layer)
     }
     
     internal func clef(at x: CGFloat) -> StaffClef? {

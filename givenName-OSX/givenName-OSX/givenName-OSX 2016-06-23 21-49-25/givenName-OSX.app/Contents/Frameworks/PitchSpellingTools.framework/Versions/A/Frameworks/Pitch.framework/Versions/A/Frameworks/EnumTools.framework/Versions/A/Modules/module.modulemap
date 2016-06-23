@@ -1,0 +1,10 @@
+framework module EnumTools {
+  umbrella header "EnumTools.h"
+
+  export *
+  module * { export * }
+}
+
+module EnumTools.Swift {
+    header "EnumTools-Swift.h"
+}

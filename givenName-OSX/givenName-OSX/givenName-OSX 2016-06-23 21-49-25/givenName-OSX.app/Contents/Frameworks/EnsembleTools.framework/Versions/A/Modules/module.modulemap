@@ -1,0 +1,10 @@
+framework module EnsembleTools {
+  umbrella header "EnsembleTools.h"
+
+  export *
+  module * { export * }
+}
+
+module EnsembleTools.Swift {
+    header "EnsembleTools-Swift.h"
+}

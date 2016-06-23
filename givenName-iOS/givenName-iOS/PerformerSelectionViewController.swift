@@ -8,9 +8,10 @@
 
 import UIKit
 
-class PerformerSelectionViewController: UIViewController {
+final class PerformerSelectionViewController: UIViewController {
     
     // Choose your instrument label:
     // PerformerSelectionTableView (-> InstructionsViewController)
     // givenName text label
 }
+

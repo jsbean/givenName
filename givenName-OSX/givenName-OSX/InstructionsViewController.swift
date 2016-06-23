@@ -8,8 +8,39 @@
 
 import AppKit
 
-class InstructionsViewController: NSViewController {
+// Instructions TextView
+// Start button (-> ScoreViewController)
+
+final class InstructionsViewController: NSViewController {
     
-    // Instructions TextView
-    // Start button (-> ScoreViewController)
+    // var instrumentKind: InstrumentKind!
+    
+    override func loadView() {
+        let mainWindow = NSApplication.sharedApplication().windows[0]
+        self.view = NSView()
+        self.view.frame = mainWindow.frame
+        self.view.wantsLayer = true
+        self.view.layer!.backgroundColor = NSColor.blackColor().CGColor
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createStartButton()
+    }
+    
+    private func createStartButton() {
+        let button = NSButton()
+        button.frame = NSRect(x: 0, y: 0, width: 100, height: 100)
+        button.title = "Start"
+        
+        // center button
+        button.frame.origin.x = 0.5 * view.frame.width - 0.5 * button.frame.width
+        button.action = #selector(showScoreViewController)
+        view.addSubview(button)
+    }
+    
+    @objc private func showScoreViewController() {
+        print("show score view controller")
+        view.window?.contentViewController = ScoreViewController()
+    }
 }

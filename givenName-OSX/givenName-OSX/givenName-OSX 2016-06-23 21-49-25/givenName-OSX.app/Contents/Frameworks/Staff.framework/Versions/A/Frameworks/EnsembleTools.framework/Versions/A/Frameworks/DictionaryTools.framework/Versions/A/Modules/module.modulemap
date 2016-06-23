@@ -1,0 +1,10 @@
+framework module DictionaryTools {
+  umbrella header "DictionaryTools.h"
+
+  export *
+  module * { export * }
+}
+
+module DictionaryTools.Swift {
+    header "DictionaryTools-Swift.h"
+}

@@ -1,0 +1,10 @@
+framework module Staff {
+  umbrella header "Staff.h"
+
+  export *
+  module * { export * }
+}
+
+module Staff.Swift {
+    header "Staff-Swift.h"
+}

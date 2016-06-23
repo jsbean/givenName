@@ -1,0 +1,10 @@
+framework module TreeTools {
+  umbrella header "TreeTools.h"
+
+  export *
+  module * { export * }
+}
+
+module TreeTools.Swift {
+    header "TreeTools-Swift.h"
+}

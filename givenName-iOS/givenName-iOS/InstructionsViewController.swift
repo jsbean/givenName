@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InstructionsViewController: UIViewController {
+final class InstructionsViewController: UIViewController {
     
     // Instructions TextView
     // Start button (-> ScoreViewController)
