@@ -42,18 +42,15 @@ final class ScoreViewController: NSViewController {
         configureProgressBar()
         createBackButton()
         createPauseButton()
+
+        addEvent(withPitch: Pitch.random(), from: 3, to: 5)
+        addEvent(withPitch: Pitch.random(), from: 6, to: 7)
         
-        // TODO: refactor -> configure staff
-        let staff = makeStaff()
-        view.layer!.addSublayer(staff)
-        addRanodmPitchToStaff()
-        
-        // Test execution of timeline
-        timeline.add(at: 2) { self.start() }
         timeline.start()
     }
     
-    private func addRanodmPitchToStaff() {
+    private func addRandomPitchToStaff() {
+        let staff = makeStaff() // ensure clean staff
         let pitch = try! Pitch.random(resolution: 1).spelledWithDefaultSpelling()
         let event = StaffEvent(
             staffSpaceHeight: 20,
@@ -64,6 +61,10 @@ final class ScoreViewController: NSViewController {
             )
         )
         staff.addEvent(event, at: 100)
+    }
+    
+    private func hideStaff() {
+        staff.removeFromSuperlayer()
     }
     
     @objc private func pauseTimeline() {
@@ -78,11 +79,21 @@ final class ScoreViewController: NSViewController {
         // TODO: layout buttons
     }
     
-    private func start() {
+    private func addEvent(withPitch pitch: Pitch, from start: Seconds, to end: Seconds) {
+        timeline.add(at: start) { self.addRandomPitchToStaff() }
+        timeline.add(at: start) { self.engageProgressBar(for: end - start) }
+        timeline.add(at: end) { self.hideStaff() }
+    }
+    
+    private func engageProgressBar(for duration: Seconds) {
         let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.duration = 5
+        animation.duration = duration
         animation.toValue = view.frame.width
         progressBar.addAnimation(animation, forKey: "bounds.size.width")
+    }
+    
+    private func start() {
+        timeline.start()
     }
     
     private func configureProgressBar() {
