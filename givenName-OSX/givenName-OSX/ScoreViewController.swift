@@ -38,26 +38,37 @@ final class ScoreViewController: NSViewController {
         let t = Timeline()
         switch self.instrumentKind {
         case .flute:
-            break
+            // 1st half
+            self.addEvent(to: t, withPitch: 67, from: 1.75 * 60, to: 3.25 * 60)
+            self.addEvent(to: t, withPitch: 78, from: 3.5 * 60, to: 4.5 * 60)
+            // 2nd half
+            self.addEvent(to: t, withPitch: 86, from: 7 * 60, to: 8 * 60)
+            self.addEvent(to: t, withPitch: 64, from: 8.25 * 60, to: 9 * 60)
         case .clarinet:
-            break
+            // 1st half
+            self.addEvent(to: t, withPitch: 65, from: 1.75 * 60, to: 3.25 * 60)
+            self.addEvent(to: t, withPitch: 78, from: 3.5 * 60, to: 4.5 * 60)
+            // 2nd half
+            self.addEvent(to: t, withPitch: 78, from: 7 * 60, to: 8 * 60)
+            self.addEvent(to: t, withPitch: 68, from: 8.25 * 60, to: 9 * 60)
         case .saxophone:
-            
             // 1st half
             self.addEvent(to: t, withPitch: 58, from: 1, to: 1 * 60)
             self.addEvent(to: t, withPitch: 58, from: 1.25 * 60, to: 2 * 60)
             self.addEvent(to: t, withPitch: 58, from: 2.5 * 60, to: 3.3333 * 60)
             self.addEvent(to: t, withPitch: 58, from: 3.6666 * 60, to: 4.5 * 60)
-            
             // 2nd half
             self.addEvent(to: t, withPitch: 78, from: 6.666 * 60, to: 7.5 * 60)
             self.addEvent(to: t, withPitch: 78, from: 7.8333 * 60, to: 8.75 * 60)
             self.addEvent(to: t, withPitch: 78, from: 9 * 60, to: 10 * 60)
         case .violin:
-            break
+            self.addEvent(to: t, withPitch: 86, from: 1 * 60, to: 2 * 60)
+            self.addEvent(to: t, withPitch: 68, from: 3 * 60, to: 4.5 * 60)
         case .cello:
-            break
+            self.addEvent(to: t, withPitch: 98, from: 1 * 60, to: 2 * 60)
+            self.addEvent(to: t, withPitch: 64, from: 3 * 60, to: 4.5 * 60)
         }
+        print("timeline: \(t.registry)")
         return t
     }()
     

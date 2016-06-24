@@ -29,7 +29,7 @@ enum InstrumentKind: String {
         case .clarinet: return .treble
         case .saxophone: return .treble
         case .violin: return .treble
-        case .cello: return .bass // maybe just use treble considering its all hight
+        case .cello: return .treble
         }
     }
     
