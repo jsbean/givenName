@@ -62,11 +62,19 @@ final class ScoreViewController: NSViewController {
             self.addEvent(to: t, withPitch: 78, from: 7.8333 * 60, to: 8.75 * 60)
             self.addEvent(to: t, withPitch: 78, from: 9 * 60, to: 10 * 60)
         case .violin:
+            // 1st half
             self.addEvent(to: t, withPitch: 86, from: 1 * 60, to: 2 * 60)
             self.addEvent(to: t, withPitch: 68, from: 3 * 60, to: 4.5 * 60)
+            // 2nd half
+            self.addEvent(to: t, withPitch: 65, from: 6.5 * 60, to: 7.75 * 60)
+            self.addEvent(to: t, withPitch: 78, from: 8 * 60, to: 9 * 60)
         case .cello:
+            // 1st half
             self.addEvent(to: t, withPitch: 98, from: 1 * 60, to: 2 * 60)
             self.addEvent(to: t, withPitch: 64, from: 3 * 60, to: 4.5 * 60)
+            // 2nd half
+            self.addEvent(to: t, withPitch: 67, from: 6.5 * 60, to: 7.75 * 60)
+            self.addEvent(to: t, withPitch: 78, from: 8 * 60, to: 9 * 60)
         }
         print("timeline: \(t.registry)")
         return t
