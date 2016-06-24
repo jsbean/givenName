@@ -34,7 +34,30 @@ final class ScoreViewController: NSViewController {
     var staff: StaffLayer = StaffLayer(identifier: "staff", staffSpaceHeight: 20)
     
     // Action model
-    var timeline = Timeline()
+    private lazy var timeline: Timeline = {
+        switch self.instrumentKind {
+        case .flute:
+            let result = Timeline()
+            result.add(at: 1) { print("zero") }
+            return result
+        case .clarinet:
+            let result = Timeline()
+            result.add(at: 1) { print("zero") }
+            return result
+        case .saxophone:
+            let result = Timeline()
+            result.add(at: 1) { print("zero") }
+            return result
+        case .violin:
+            let result = Timeline()
+            result.add(at: 1) { print("zero") }
+            return result
+        case .cello:
+            let result = Timeline()
+            result.add(at: 1) { print("zero") }
+            return result
+        }
+    }()
     
     // Instrument model
     let instrumentKind: InstrumentKind
@@ -61,9 +84,9 @@ final class ScoreViewController: NSViewController {
         super.viewDidAppear()
         configureProgressBar()
 
-        // manage Action model here
-        addEvent(withPitch: Pitch.random(), from: 3, to: 5)
-        addEvent(withPitch: Pitch.random(), from: 6, to: 7)
+//        // manage Action model here
+//        addEvent(withPitch: Pitch.random(), from: 3, to: 5)
+//        addEvent(withPitch: Pitch.random(), from: 6, to: 7)
         
         timeline.start()
     }
@@ -86,12 +109,15 @@ final class ScoreViewController: NSViewController {
     
     private func addRandomPitchToStaff() {
         let staff = makeStaff() // ensure clean staff
-        let pitch = try! Pitch.random(resolution: 1).spelledWithDefaultSpelling()
+        let pitch = Pitch.random()
+        let transposition = instrumentKind.transposition
+        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch.noteNumber.value + transposition))
+        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
         let event = StaffEvent(
             staffSpaceHeight: 20,
             representablePitchCollection: StaffRepresentablePitchCollection(
                 [
-                    StaffRepresentablePitchContext(pitch)!
+                    StaffRepresentablePitchContext(spelledPitch)!
                 ]
             )
         )

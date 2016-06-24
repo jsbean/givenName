@@ -7,6 +7,7 @@
 //
 
 import Staff
+import Timeline
 
 // subset of the real InstrumentKind, for now
 
