@@ -27,8 +27,10 @@ final class ScoreViewController: NSViewController {
     
     // UI elements
     var backButton: NSButton!
-    var pauseButton: NSButton!
+    var pauseResumeButton: NSButton!
     var progressBar = CALayer()
+    
+    var isPaused: Bool = false
 
     // Music notational elements
     var staff: StaffLayer = StaffLayer(identifier: "staff", staffSpaceHeight: 20)
@@ -142,12 +144,8 @@ final class ScoreViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        configureProgressBar()
-
-//        // manage Action model here
-//        addEvent(withPitch: Pitch.random(), from: 3, to: 5)
-//        addEvent(withPitch: Pitch.random(), from: 6, to: 7)
         
+        configureProgressBar()
         timeline.start()
     }
     
@@ -163,7 +161,7 @@ final class ScoreViewController: NSViewController {
     }
     
     private func layoutButtons() {
-        pauseButton.frame.origin = CGPoint(x: 0.5 * view.frame.width - 0.5 * 150, y: 0)
+        pauseResumeButton.frame.origin = CGPoint(x: 0.5 * view.frame.width - 0.5 * 150, y: 0)
         backButton.frame.origin = CGPoint.zero
     }
     
@@ -203,31 +201,52 @@ final class ScoreViewController: NSViewController {
     private func hideStaff() {
         staff.removeFromSuperlayer()
     }
-    
-    @objc private func pauseTimeline() {
-        timeline.pause()
-        progressBar.removeFromSuperlayer()
+
+    // TODO: Encapsulate isPaused under Timeline abstraction barrier
+    @objc private func pauseOrResumeTimeline() {
+
+        if isPaused {
+            timeline.resume()
+            isPaused = false
+            pauseResumeButton.title = "Pause"
+            guard let secondsUntilNext = timeline.secondsUntilNext else { return }
+            let width = progressBar.presentationLayer()!.frame.width
+            configureProgressBar()
+            engageProgressBar(fromWidth: width, for: secondsUntilNext) // s
+
+        } else {
+            timeline.pause()
+            guard let frame = progressBar.presentationLayer()?.frame else { return }
+            progressBar.speed = 0
+            progressBar.frame = frame
+            pauseResumeButton.title = "Resume"
+            isPaused = true
+        }
     }
-    
+
     private func addEvent(to timeline: Timeline, withPitch pitch: Float, from start: Seconds, to end: Seconds) {
         timeline.add(at: start) { self.show(pitch: pitch) }
         timeline.add(at: start) { self.engageProgressBar(for: end - start) }
         timeline.add(at: end) { self.hideStaff() }
     }
     
-    private func engageProgressBar(for duration: Seconds) {
-        let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.duration = duration
-        animation.toValue = view.frame.width
-        progressBar.addAnimation(animation, forKey: "bounds.size.width")
-    }
-    
     private func start() {
         timeline.start()
     }
     
-    private func configureProgressBar() {
-        progressBar.frame = CGRect(x: 0, y: view.frame.height - 40, width: 0, height: 40)
+    private func engageProgressBar(fromWidth width: CGFloat = 0, for duration: Seconds) {
+        if progressBar.superlayer == nil { view.layer!.addSublayer(progressBar) }
+        let animation = CABasicAnimation(keyPath: "bounds.size.width")
+        animation.duration = duration
+        animation.fromValue = width
+        animation.toValue = view.frame.width
+        progressBar.addAnimation(animation, forKey: "bounds.size.width")
+    }
+    
+    private func configureProgressBar(width width: CGFloat = 0) {
+        progressBar.removeFromSuperlayer()
+        progressBar = CALayer()
+        progressBar.frame = CGRect(x: 0, y: view.frame.height - 40, width: width, height: 40)
         progressBar.anchorPoint = CGPoint.zero
         progressBar.backgroundColor = NSColor.whiteColor().CGColor
         progressBar.opacity = 0.2
@@ -264,15 +283,16 @@ final class ScoreViewController: NSViewController {
     }
     
     private func createPauseButton() {
-        pauseButton = Button(
+        pauseResumeButton = Button(
             origin: CGPoint(x: 0.5 * view.frame.width - 0.5 * 150, y: 0),
             title: "Pause",
-            selector: #selector(pauseTimeline)
+            selector: #selector(pauseOrResumeTimeline)
         )
-        view.addSubview(pauseButton)
+        view.addSubview(pauseResumeButton)
     }
     
     @objc private func returnToInstructionsViewController() {
+        timeline.stop()
         let viewController = InstructionsViewController(instrumentKind: instrumentKind)
         view.window?.contentViewController = viewController
     }
