@@ -13,7 +13,18 @@ import AppKit
 
 final class InstructionsViewController: NSViewController {
     
-    // var instrumentKind: InstrumentKind!
+    let instrumentKind: InstrumentKind
+    
+    var startButton: NSButton!
+    
+    init(instrumentKind: InstrumentKind) {
+        self.instrumentKind = instrumentKind
+        super.init(nibName: nil, bundle: nil)!
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         self.view = NSView()
@@ -28,18 +39,17 @@ final class InstructionsViewController: NSViewController {
     }
     
     private func createStartButton() {
-        let button = NSButton()
-        button.frame = NSRect(x: 0, y: 0, width: 100, height: 100)
-        button.title = "Start"
-        
-        // center button
-        button.frame.origin.x = 0.5 * view.frame.width - 0.5 * button.frame.width
-        button.action = #selector(showScoreViewController)
-        view.addSubview(button)
+        startButton = Button(
+            origin: CGPoint(x: 0.5 * view.frame.width - 0.5 * 150, y: 0),
+            title: "Start",
+            selector: #selector(showScoreViewController)
+        )
+        view.addSubview(startButton)
     }
     
     @objc private func showScoreViewController() {
         print("show score view controller")
-        view.window?.contentViewController = ScoreViewController()
+        let viewController = ScoreViewController(instrumentKind: instrumentKind)
+        view.window?.contentViewController = viewController
     }
 }

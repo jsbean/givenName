@@ -29,7 +29,17 @@ enum InstrumentKind: String {
         case .clarinet: return .treble
         case .saxophone: return .treble
         case .violin: return .treble
-        case .cello: return .bass
+        case .cello: return .bass // maybe just use treble considering its all hight
+        }
+    }
+    
+    var transposition: Float {
+        switch self {
+        case .flute: return 0
+        case .clarinet: return 2
+        case .saxophone: return 2
+        case .violin: return 0
+        case .cello: return 0
         }
     }
 }
@@ -75,7 +85,9 @@ extension PerformerSelectionViewController: NSTableViewDelegate {
     }
     
     func tableViewSelectionDidChange(notification: NSNotification) {
-        view.window?.contentViewController = InstructionsViewController()
+        let instrumentKind = InstrumentKind.allCases[tableView.selectedRow]
+        let viewController = InstructionsViewController(instrumentKind: instrumentKind)
+        view.window?.contentViewController = viewController
     }
 }
 
