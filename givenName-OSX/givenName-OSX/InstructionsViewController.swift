@@ -38,6 +38,11 @@ final class InstructionsViewController: NSViewController {
         createStartButton()
     }
     
+    override func viewDidLayout() {
+        super.viewDidLayout()
+        startButton.frame.origin = CGPoint(x: 0.5 * view.frame.width - 0.5 * 150, y: 0)
+    }
+    
     private func createStartButton() {
         startButton = Button(
             origin: CGPoint(x: 0.5 * view.frame.width - 0.5 * 150, y: 0),
