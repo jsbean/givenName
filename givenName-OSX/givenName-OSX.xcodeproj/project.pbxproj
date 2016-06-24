@@ -40,6 +40,7 @@
 		07347A401D1C60CD0040457E /* Timeline.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A201D1C60AD0040457E /* Timeline.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A411D1C60CD0040457E /* TreeTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A211D1C60AD0040457E /* TreeTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		074744A71D1D3D090078834B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074744A61D1D3D090078834B /* Button.swift */; };
+		074744AB1D1D49900078834B /* InstrumentKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074744AA1D1D49900078834B /* InstrumentKind.swift */; };
 		075AFE7C1D1C652800382E4A /* PerformerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE7B1D1C652800382E4A /* PerformerSelectionViewController.swift */; };
 		075AFE7E1D1C659C00382E4A /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE7D1D1C659C00382E4A /* InstructionsViewController.swift */; };
 		075AFE801D1C65A300382E4A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE7F1D1C65A300382E4A /* ScoreViewController.swift */; };
@@ -95,6 +96,7 @@
 		07347A201D1C60AD0040457E /* Timeline.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Timeline.framework; path = Carthage/Build/Mac/Timeline.framework; sourceTree = "<group>"; };
 		07347A211D1C60AD0040457E /* TreeTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TreeTools.framework; path = Carthage/Build/Mac/TreeTools.framework; sourceTree = "<group>"; };
 		074744A61D1D3D090078834B /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		074744AA1D1D49900078834B /* InstrumentKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentKind.swift; sourceTree = "<group>"; };
 		075AFE7B1D1C652800382E4A /* PerformerSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformerSelectionViewController.swift; sourceTree = "<group>"; };
 		075AFE7D1D1C659C00382E4A /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		075AFE7F1D1C65A300382E4A /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074744A91D1D49860078834B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				074744AA1D1D49900078834B /* InstrumentKind.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		074744AC1D1D49AA0078834B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				074744A61D1D3D090078834B /* Button.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		075AFE7A1D1C64F100382E4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,9 +180,10 @@
 		0766718B1D1C58B9002181B1 /* givenName-OSX */ = {
 			isa = PBXGroup;
 			children = (
-				075AFE7A1D1C64F100382E4A /* ViewControllers */,
 				0766718C1D1C58B9002181B1 /* AppDelegate.swift */,
-				074744A61D1D3D090078834B /* Button.swift */,
+				074744A91D1D49860078834B /* Model */,
+				075AFE7A1D1C64F100382E4A /* ViewControllers */,
+				074744AC1D1D49AA0078834B /* UI */,
 				076671901D1C58B9002181B1 /* Assets.xcassets */,
 				076671921D1C58B9002181B1 /* Main.storyboard */,
 				076671951D1C58B9002181B1 /* Info.plist */,
@@ -300,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				074744AB1D1D49900078834B /* InstrumentKind.swift in Sources */,
 				074744A71D1D3D090078834B /* Button.swift in Sources */,
 				075AFE7E1D1C659C00382E4A /* InstructionsViewController.swift in Sources */,
 				075AFE7C1D1C652800382E4A /* PerformerSelectionViewController.swift in Sources */,
