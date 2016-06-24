@@ -35,28 +35,30 @@ final class ScoreViewController: NSViewController {
     
     // Action model
     private lazy var timeline: Timeline = {
+        let t = Timeline()
         switch self.instrumentKind {
         case .flute:
-            let result = Timeline()
-            result.add(at: 1) { print("zero") }
-            return result
+            break
         case .clarinet:
-            let result = Timeline()
-            result.add(at: 1) { print("zero") }
-            return result
+            break
         case .saxophone:
-            let result = Timeline()
-            result.add(at: 1) { print("zero") }
-            return result
+            
+            // 1st half
+            self.addEvent(to: t, withPitch: 58, from: 1, to: 1 * 60)
+            self.addEvent(to: t, withPitch: 58, from: 1.25 * 60, to: 2 * 60)
+            self.addEvent(to: t, withPitch: 58, from: 2.5 * 60, to: 3.3333 * 60)
+            self.addEvent(to: t, withPitch: 58, from: 3.6666 * 60, to: 4.5 * 60)
+            
+            // 2nd half
+            self.addEvent(to: t, withPitch: 78, from: 6.666 * 60, to: 7.5 * 60)
+            self.addEvent(to: t, withPitch: 78, from: 7.8333 * 60, to: 8.75 * 60)
+            self.addEvent(to: t, withPitch: 78, from: 9 * 60, to: 10 * 60)
         case .violin:
-            let result = Timeline()
-            result.add(at: 1) { print("zero") }
-            return result
+            break
         case .cello:
-            let result = Timeline()
-            result.add(at: 1) { print("zero") }
-            return result
+            break
         }
+        return t
     }()
     
     // Instrument model
@@ -124,6 +126,22 @@ final class ScoreViewController: NSViewController {
         staff.addEvent(event, at: 100)
     }
     
+    private func show(pitch pitch: Float) {
+        let staff = makeStaff() // ensure clean staff
+        let transposition = instrumentKind.transposition
+        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch + transposition))
+        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
+        let event = StaffEvent(
+            staffSpaceHeight: 20,
+            representablePitchCollection: StaffRepresentablePitchCollection(
+                [
+                    StaffRepresentablePitchContext(spelledPitch)!
+                ]
+            )
+        )
+        staff.addEvent(event, at: 100)
+    }
+    
     private func hideStaff() {
         staff.removeFromSuperlayer()
     }
@@ -133,8 +151,8 @@ final class ScoreViewController: NSViewController {
         progressBar.removeFromSuperlayer()
     }
     
-    private func addEvent(withPitch pitch: Pitch, from start: Seconds, to end: Seconds) {
-        timeline.add(at: start) { self.addRandomPitchToStaff() }
+    private func addEvent(to timeline: Timeline, withPitch pitch: Float, from start: Seconds, to end: Seconds) {
+        timeline.add(at: start) { self.show(pitch: pitch) }
         timeline.add(at: start) { self.engageProgressBar(for: end - start) }
         timeline.add(at: end) { self.hideStaff() }
     }
