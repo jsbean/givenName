@@ -39,9 +39,6 @@ final class PerformerSelectionViewController: NSViewController {
         }
     }
     
-    // Choose your instrument label:
-    // PerformerSelectionTableView (-> InstructionsViewController)
-    
     // givenName text label
 }
 

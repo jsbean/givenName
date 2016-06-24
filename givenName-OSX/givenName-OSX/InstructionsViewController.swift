@@ -16,6 +16,7 @@ final class InstructionsViewController: NSViewController {
     let instrumentKind: InstrumentKind
     
     var startButton: NSButton!
+    var backButton: NSButton!
     
     init(instrumentKind: InstrumentKind) {
         self.instrumentKind = instrumentKind
@@ -52,8 +53,12 @@ final class InstructionsViewController: NSViewController {
         view.addSubview(startButton)
     }
     
+    @objc private func returnToPerformerSelectionViewController() {
+        let viewController = PerformerSelectionViewController(nibName: "performerSelectionViewController", bundle: nil)
+        view.window?.contentViewController = viewController
+    }
+    
     @objc private func showScoreViewController() {
-        print("show score view controller")
         let viewController = ScoreViewController(instrumentKind: instrumentKind)
         view.window?.contentViewController = viewController
     }
