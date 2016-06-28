@@ -47,7 +47,6 @@
 		0766718D1D1C58B9002181B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766718C1D1C58B9002181B1 /* AppDelegate.swift */; };
 		076671911D1C58B9002181B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076671901D1C58B9002181B1 /* Assets.xcassets */; };
 		076671941D1C58B9002181B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076671921D1C58B9002181B1 /* Main.storyboard */; };
-		077FB8A51D229EDE00C399FA /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077FB8A41D229EDE00C399FA /* ProgressBar.swift */; };
 		07EE41461D22C24200DEC56D /* ProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07EE41451D22C24200DEC56D /* ProgressBar.framework */; };
 		07EE41471D22C24200DEC56D /* ProgressBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07EE41451D22C24200DEC56D /* ProgressBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -109,7 +108,6 @@
 		076671901D1C58B9002181B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		076671931D1C58B9002181B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		076671951D1C58B9002181B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		077FB8A41D229EDE00C399FA /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		07EE41451D22C24200DEC56D /* ProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProgressBar.framework; path = Carthage/Build/Mac/ProgressBar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,7 +150,6 @@
 		074744AC1D1D49AA0078834B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				077FB8A41D229EDE00C399FA /* ProgressBar.swift */,
 				074744A61D1D3D090078834B /* Button.swift */,
 			);
 			name = UI;
@@ -335,7 +332,6 @@
 				075AFE7C1D1C652800382E4A /* PerformerSelectionViewController.swift in Sources */,
 				0766718D1D1C58B9002181B1 /* AppDelegate.swift in Sources */,
 				075AFE801D1C65A300382E4A /* ScoreViewController.swift in Sources */,
-				077FB8A51D229EDE00C399FA /* ProgressBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
