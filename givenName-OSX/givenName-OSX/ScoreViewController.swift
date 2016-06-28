@@ -10,6 +10,7 @@ import AppKit
 import Timeline
 import Pitch
 import PitchSpellingTools
+import ProgressBar
 import Staff
 
 // Buttons:
@@ -19,8 +20,6 @@ import Staff
 // Skip backward button (-> try timeline.jump(amount: Seconds))
 
 // Graphical elements:
-// Staff
-// Progress bar
 // Time label
 
 final class ScoreViewController: NSViewController {
