@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import DictionaryTools
 @testable import Timeline
 
 class TimelineTests: XCTestCase {
@@ -77,5 +78,18 @@ class TimelineTests: XCTestCase {
         XCTAssertEqual(timeline.currentFrame, 60)
         (0..<100).forEach { _ in timeline.advance() }
         XCTAssertEqual(timeline.currentFrame, 160)
+    }
+    
+    func testSorted() {
+        let timeline = Timeline()
+        timeline.add(at: 3) { () }
+        timeline.add(at: 2) { () }
+        timeline.add(at: 5) { () }
+        timeline.add(at: 1) { () }
+        timeline.add(at: 4) { () }
+        print(timeline)
+//        for a in timeline.registry {
+//            print(a)
+//        }
     }
 }

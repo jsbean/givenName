@@ -28,7 +28,7 @@ final class ScoreViewController: NSViewController {
     // UI elements
     var backButton: NSButton!
     var pauseResumeButton: NSButton!
-    var progressBar = CALayer()
+    var progressBar: ProgressBar!
     
     var isPaused: Bool = false
 
@@ -42,81 +42,81 @@ final class ScoreViewController: NSViewController {
         case .flute:
             
             // 1st half
-            t.add(at: 1) { self.engageProgressBar(for: 1.75 * 60 - 1) }
+            t.add(at: 1) { self.progressBar.start(for: 1.75 * 60 - 1) }
             self.addEvent(to: t, withPitch: 67, from: 1.75 * 60, to: 3.25 * 60)
-            t.add(at: 3.25 * 60) { self.engageProgressBar(for: (3.5 - 3.25) * 60) }
+            t.add(at: 3.25 * 60) { self.progressBar.start(for: (3.5 - 3.25) * 60) }
             self.addEvent(to: t, withPitch: 78, from: 3.5 * 60, to: 4.5 * 60)
-            t.add(at: 4.5 * 60) { self.engageProgressBar(for: (7 - 4.5)  * 60) }
+            t.add(at: 4.5 * 60) { self.progressBar.start(for: (7 - 4.5)  * 60) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 86, from: 7 * 60, to: 8 * 60)
-            t.add(at: 8 * 60) { self.engageProgressBar(for: (8.25 - 8) * 60) }
+            t.add(at: 8 * 60) { self.progressBar.start(for: (8.25 - 8) * 60) }
             self.addEvent(to: t, withPitch: 64, from: 8.25 * 60, to: 9 * 60)
-            t.add(at: 9 * 60) { self.engageProgressBar(for: (10 - 9) * 60) }
+            t.add(at: 9 * 60) { self.progressBar.start(for: (10 - 9) * 60) }
             
         case .clarinet:
             
             // 1st half
-            t.add(at: 1) { self.engageProgressBar(for: 1.75 * 60) }
+            t.add(at: 1) { self.progressBar.start(for: 1.75 * 60) }
             self.addEvent(to: t, withPitch: 65, from: 1.75 * 60, to: 3.25 * 60)
-            t.add(at: 3.25 * 60) { self.engageProgressBar(for: (3.5 - 3.25) * 60) }
+            t.add(at: 3.25 * 60) { self.progressBar.start(for: (3.5 - 3.25) * 60) }
             self.addEvent(to: t, withPitch: 78, from: 3.5 * 60, to: 4.5 * 60)
-            t.add(at: 4.5 * 60) { self.engageProgressBar(for: (7 - 4.5)  * 60) }
+            t.add(at: 4.5 * 60) { self.progressBar.start(for: (7 - 4.5)  * 60) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 78, from: 7 * 60, to: 8 * 60)
-            t.add(at: 8 * 60) { self.engageProgressBar(for: (8.25 - 8) * 60) }
+            t.add(at: 8 * 60) { self.progressBar.start(for: (8.25 - 8) * 60) }
             self.addEvent(to: t, withPitch: 68, from: 8.25 * 60, to: 9 * 60)
-            t.add(at: 9 * 60) { self.engageProgressBar(for: (10 - 9) * 60) }
+            t.add(at: 9 * 60) { self.progressBar.start(for: (10 - 9) * 60) }
             
         case .saxophone:
             
             // 1st half
             self.addEvent(to: t, withPitch: 58, from: 1, to: 1 * 60)
-            t.add(at: 1 * 60) { self.engageProgressBar(for: (1.25 - 1) * 60 ) }
+            t.add(at: 1 * 60) { self.progressBar.start(for: (1.25 - 1) * 60 ) }
             self.addEvent(to: t, withPitch: 58, from: 1.25 * 60, to: 2 * 60)
-            t.add(at: 2 * 60) { self.engageProgressBar(for: (2.5 - 2) * 60 ) }
+            t.add(at: 2 * 60) { self.progressBar.start(for: (2.5 - 2) * 60 ) }
             self.addEvent(to: t, withPitch: 58, from: 2.5 * 60, to: 3.333 * 60)
-            t.add(at: 3.333 * 60) { self.engageProgressBar(for: (3.666 - 3.333) * 60 ) }
+            t.add(at: 3.333 * 60) { self.progressBar.start(for: (3.666 - 3.333) * 60 ) }
             self.addEvent(to: t, withPitch: 58, from: 3.666 * 60, to: 4.5 * 60)
-            t.add(at: 3.666 * 60) { self.engageProgressBar(for: (6.666 - 3.666) * 60 ) }
+            t.add(at: 3.666 * 60) { self.progressBar.start(for: (6.666 - 3.666) * 60 ) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 78, from: 6.666 * 60, to: 7.5 * 60)
-            t.add(at: 7.5 * 60) { self.engageProgressBar(for: (7.8333 - 7.5) * 60 ) }
+            t.add(at: 7.5 * 60) { self.progressBar.start(for: (7.8333 - 7.5) * 60 ) }
             self.addEvent(to: t, withPitch: 78, from: 7.8333 * 60, to: 8.75 * 60)
-            t.add(at: 8.75 * 60) { self.engageProgressBar(for: (9 - 8.75) * 60 ) }
+            t.add(at: 8.75 * 60) { self.progressBar.start(for: (9 - 8.75) * 60 ) }
             self.addEvent(to: t, withPitch: 78, from: 9 * 60, to: 10 * 60)
             
         case .violin:
             
             // 1st half
-            t.add(at: 1) { self.engageProgressBar(for: 1 * 60 - 1 ) }
+            t.add(at: 1) { self.progressBar.start(for: 1 * 60 - 1 ) }
             self.addEvent(to: t, withPitch: 86, from: 1 * 60, to: 2 * 60)
-            t.add(at: 2 * 60) { self.engageProgressBar(for: (3 - 2) * 60 ) }
+            t.add(at: 2 * 60) { self.progressBar.start(for: (3 - 2) * 60 ) }
             self.addEvent(to: t, withPitch: 68, from: 3 * 60, to: 4.5 * 60)
-            t.add(at: 4.5 * 60) { self.engageProgressBar(for: (6.5 - 4.5) * 60 ) }
+            t.add(at: 4.5 * 60) { self.progressBar.start(for: (6.5 - 4.5) * 60 ) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 65, from: 6.5 * 60, to: 7.75 * 60)
-            t.add(at: 7.75 * 60) { self.engageProgressBar(for: (8 - 7.75) * 60 ) }
+            t.add(at: 7.75 * 60) { self.progressBar.start(for: (8 - 7.75) * 60 ) }
             self.addEvent(to: t, withPitch: 78, from: 8 * 60, to: 9 * 60)
-            t.add(at: 9 * 60) { self.engageProgressBar(for: (10 - 9) * 60 ) }
+            t.add(at: 9 * 60) { self.progressBar.start(for: (10 - 9) * 60 ) }
             
         case .cello:
             
             // 1st half
-            t.add(at: 1) { self.engageProgressBar(for: 1 * 60 - 1 ) }
+            t.add(at: 1) { self.progressBar.start(for: 1 * 60 - 1 ) }
             self.addEvent(to: t, withPitch: 96, from: 1 * 60, to: 2 * 60)
-            t.add(at: 2 * 60) { self.engageProgressBar(for: (3 - 2) * 60 ) }
+            t.add(at: 2 * 60) { self.progressBar.start(for: (3 - 2) * 60 ) }
             self.addEvent(to: t, withPitch: 64, from: 3 * 60, to: 4.5 * 60)
-            t.add(at: 4.5 * 60) { self.engageProgressBar(for: (6.5 - 4.5) * 60 ) }
+            t.add(at: 4.5 * 60) { self.progressBar.start(for: (6.5 - 4.5) * 60 ) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 67, from: 6.5 * 60, to: 7.75 * 60)
-            t.add(at: 7.75 * 60) { self.engageProgressBar(for: (8 - 7.75) * 60 ) }
+            t.add(at: 7.75 * 60) { self.progressBar.start(for: (8 - 7.75) * 60 ) }
             self.addEvent(to: t, withPitch: 78, from: 8 * 60, to: 9 * 60)
-            t.add(at: 9 * 60) { self.engageProgressBar(for: (10 - 9) * 60 ) }
+            t.add(at: 9 * 60) { self.progressBar.start(for: (10 - 9) * 60 ) }
         }
         return t
     }()
@@ -144,7 +144,6 @@ final class ScoreViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        
         configureProgressBar()
         timeline.start()
     }
@@ -156,8 +155,18 @@ final class ScoreViewController: NSViewController {
         layoutButtons()
     }
     
+    private func configureProgressBar() {
+        progressBar = ProgressBar(
+            origin: CGPoint(x: 0, y: view.frame.height - 40),
+            fullWidth: view.frame.width,
+            height: 40
+        )
+        view.layer!.addSublayer(progressBar.layer)
+    }
+    
     private func layoutProgressBar() {
-        progressBar.frame = CGRect(x: 0, y: view.frame.height - 40, width: 0, height: 40)
+        progressBar.origin = CGPoint(x: 0, y: view.frame.height - 40)
+        progressBar.fullWidth = view.frame.width
     }
     
     private func layoutButtons() {
@@ -202,55 +211,26 @@ final class ScoreViewController: NSViewController {
         staff.removeFromSuperlayer()
     }
 
-    // TODO: Encapsulate isPaused under Timeline abstraction barrier
     @objc private func pauseOrResumeTimeline() {
-
-        if isPaused {
-            timeline.resume()
-            isPaused = false
-            pauseResumeButton.title = "Pause"
-            guard let secondsUntilNext = timeline.secondsUntilNext else { return }
-            let width = progressBar.presentationLayer()!.frame.width
-            configureProgressBar()
-            engageProgressBar(fromWidth: width, for: secondsUntilNext) // s
-
-        } else {
+        if timeline.isActive {
             timeline.pause()
-            guard let frame = progressBar.presentationLayer()?.frame else { return }
-            progressBar.speed = 0
-            progressBar.frame = frame
+            progressBar.pause()
             pauseResumeButton.title = "Resume"
-            isPaused = true
+        } else {
+            timeline.resume()
+            progressBar.resume()
+            pauseResumeButton.title = "Pause"
         }
     }
-
+    
     private func addEvent(to timeline: Timeline, withPitch pitch: Float, from start: Seconds, to end: Seconds) {
         timeline.add(at: start) { self.show(pitch: pitch) }
-        timeline.add(at: start) { self.engageProgressBar(for: end - start) }
+        timeline.add(at: start) { self.progressBar.start(for: end - start) }
         timeline.add(at: end) { self.hideStaff() }
     }
     
     private func start() {
         timeline.start()
-    }
-    
-    private func engageProgressBar(fromWidth width: CGFloat = 0, for duration: Seconds) {
-        if progressBar.superlayer == nil { view.layer!.addSublayer(progressBar) }
-        let animation = CABasicAnimation(keyPath: "bounds.size.width")
-        animation.duration = duration
-        animation.fromValue = width
-        animation.toValue = view.frame.width
-        progressBar.addAnimation(animation, forKey: "bounds.size.width")
-    }
-    
-    private func configureProgressBar(width width: CGFloat = 0) {
-        progressBar.removeFromSuperlayer()
-        progressBar = CALayer()
-        progressBar.frame = CGRect(x: 0, y: view.frame.height - 40, width: width, height: 40)
-        progressBar.anchorPoint = CGPoint.zero
-        progressBar.backgroundColor = NSColor.whiteColor().CGColor
-        progressBar.opacity = 0.2
-        view.layer!.addSublayer(progressBar)
     }
     
     private func centerStaff() {
