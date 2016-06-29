@@ -11,7 +11,6 @@ import EnumTools
 import Color
 import Staff
 
-
 final class PerformerSelectionViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!

@@ -46,6 +46,7 @@
 		075AFE821D1C666A00382E4A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE811D1C666A00382E4A /* ScoreViewController.swift */; };
 		075AFE841D1C668D00382E4A /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE831D1C668D00382E4A /* InstructionsViewController.swift */; };
 		075AFE861D1C66AE00382E4A /* PerformerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE851D1C66AE00382E4A /* PerformerSelectionViewController.swift */; };
+		07611A741D241B33008C6C4F /* InstrumentKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07611A731D241B33008C6C4F /* InstrumentKind.swift */; };
 		0766716F1D1C589E002181B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766716E1D1C589E002181B1 /* AppDelegate.swift */; };
 		076671741D1C589E002181B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076671721D1C589E002181B1 /* Main.storyboard */; };
 		076671761D1C589E002181B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076671751D1C589E002181B1 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		075AFE811D1C666A00382E4A /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		075AFE831D1C668D00382E4A /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		075AFE851D1C66AE00382E4A /* PerformerSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformerSelectionViewController.swift; sourceTree = "<group>"; };
+		07611A731D241B33008C6C4F /* InstrumentKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentKind.swift; sourceTree = "<group>"; };
 		0766716B1D1C589E002181B1 /* givenName-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "givenName-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0766716E1D1C589E002181B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076671731D1C589E002181B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -150,6 +152,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		07611A721D241B33008C6C4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				07611A731D241B33008C6C4F /* InstrumentKind.swift */,
+			);
+			name = Common;
+			path = ../../Common;
+			sourceTree = "<group>";
+		};
 		076671621D1C589E002181B1 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +181,7 @@
 		0766716D1D1C589E002181B1 /* givenName-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				07611A721D241B33008C6C4F /* Common */,
 				075AFE791D1C64E800382E4A /* ViewControllers */,
 				0766716E1D1C589E002181B1 /* AppDelegate.swift */,
 				076671721D1C589E002181B1 /* Main.storyboard */,
@@ -312,6 +324,7 @@
 				075AFE861D1C66AE00382E4A /* PerformerSelectionViewController.swift in Sources */,
 				075AFE841D1C668D00382E4A /* InstructionsViewController.swift in Sources */,
 				0766716F1D1C589E002181B1 /* AppDelegate.swift in Sources */,
+				07611A741D241B33008C6C4F /* InstrumentKind.swift in Sources */,
 				075AFE821D1C666A00382E4A /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
