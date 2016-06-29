@@ -16,9 +16,13 @@ final class PerformerSelectionViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
     override func viewDidLoad() {
+        configureTableView()
+        configureAppearance()
+    }
+    
+    private func configureTableView() {
         tableView.setDelegate(self)
         tableView.setDataSource(self)
-        configureAppearance()
     }
     
     private func configureAppearance() {

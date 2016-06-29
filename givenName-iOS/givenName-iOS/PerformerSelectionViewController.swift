@@ -14,6 +14,11 @@ final class PerformerSelectionViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewDidLoad() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
     // Choose your instrument label:
     // PerformerSelectionTableView (-> InstructionsViewController)
     // givenName text label
@@ -25,17 +30,22 @@ extension PerformerSelectionViewController: UITableViewDataSource {
         return InstrumentKind.stringValues.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+    // TODO: reuse cells
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+        -> UITableViewCell
+    {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = InstrumentKind.stringValues[indexPath.row]
+        return cell
     }
 }
 
 
 extension PerformerSelectionViewController: UITableViewDelegate {
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let instrumentKind = InstrumentKind.allCases[indexPath.row]
+        let viewController = InstructionsViewController(instrumentKind: instrumentKind)
+        showViewController(viewController, sender: self)
+    }
 }
-
-// tableview delegate
-
-// tableview datasource

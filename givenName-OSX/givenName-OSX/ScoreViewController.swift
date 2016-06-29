@@ -173,22 +173,22 @@ final class ScoreViewController: NSViewController {
         backButton.frame.origin = CGPoint.zero
     }
     
-    private func addRandomPitchToStaff() {
-        let staff = makeStaff() // ensure clean staff
-        let pitch = Pitch.random()
-        let transposition = instrumentKind.transposition
-        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch.noteNumber.value + transposition))
-        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
-        let event = StaffEvent(
-            staffSpaceHeight: 20,
-            representablePitchCollection: StaffRepresentablePitchCollection(
-                [
-                    StaffRepresentablePitchContext(spelledPitch)!
-                ]
-            )
-        )
-        staff.addEvent(event, at: 100)
-    }
+//    private func addRandomPitchToStaff() {
+//        let staff = makeStaff() // ensure clean staff
+//        let pitch = Pitch.random()
+//        let transposition = instrumentKind.transposition
+//        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch.noteNumber.value + transposition))
+//        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
+//        let event = StaffEvent(
+//            staffSpaceHeight: 20,
+//            representablePitchCollection: StaffRepresentablePitchCollection(
+//                [
+//                    StaffRepresentablePitchContext(spelledPitch)!
+//                ]
+//            )
+//        )
+//        staff.addEvent(event, at: 100)
+//    }
     
     private func show(pitch pitch: Float) {
         let staff = makeStaff() // ensure clean staff
