@@ -10,18 +10,12 @@ import UIKit
 
 final class PerformerSelectionViewController: UIViewController {
     
-    // performers
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        tableView.delegate = self
-        tableView.dataSource = self
+        super.viewDidLoad()
+        view.backgroundColor = UIColor.blackColor()
     }
-    
-    // Choose your instrument label:
-    // PerformerSelectionTableView (-> InstructionsViewController)
-    // givenName text label
 }
 
 extension PerformerSelectionViewController: UITableViewDataSource {
@@ -36,10 +30,11 @@ extension PerformerSelectionViewController: UITableViewDataSource {
     {
         let cell = UITableViewCell()
         cell.textLabel?.text = InstrumentKind.stringValues[indexPath.row]
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.backgroundColor = UIColor.blackColor()
         return cell
     }
 }
-
 
 extension PerformerSelectionViewController: UITableViewDelegate {
     

@@ -47,10 +47,13 @@
 		075AFE841D1C668D00382E4A /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE831D1C668D00382E4A /* InstructionsViewController.swift */; };
 		075AFE861D1C66AE00382E4A /* PerformerSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075AFE851D1C66AE00382E4A /* PerformerSelectionViewController.swift */; };
 		07611A741D241B33008C6C4F /* InstrumentKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07611A731D241B33008C6C4F /* InstrumentKind.swift */; };
+		07611A761D242303008C6C4F /* ProgressBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07611A751D242303008C6C4F /* ProgressBar.framework */; };
+		07611A771D242303008C6C4F /* ProgressBar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07611A751D242303008C6C4F /* ProgressBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0766716F1D1C589E002181B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0766716E1D1C589E002181B1 /* AppDelegate.swift */; };
 		076671741D1C589E002181B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076671721D1C589E002181B1 /* Main.storyboard */; };
 		076671761D1C589E002181B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076671751D1C589E002181B1 /* Assets.xcassets */; };
 		076671791D1C589E002181B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076671771D1C589E002181B1 /* LaunchScreen.storyboard */; };
+		07FFCAA31D252ED400F29EC4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FFCAA21D252ED400F29EC4 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +74,7 @@
 				07347A6F1D1C63070040457E /* EnumTools.framework in Embed Frameworks */,
 				07347A731D1C63070040457E /* GraphicsTools.framework in Embed Frameworks */,
 				07347A651D1C63070040457E /* ArithmeticTools.framework in Embed Frameworks */,
+				07611A771D242303008C6C4F /* ProgressBar.framework in Embed Frameworks */,
 				07347A6D1D1C63070040457E /* EnsembleTools.framework in Embed Frameworks */,
 				07347A7D1D1C63070040457E /* Staff.framework in Embed Frameworks */,
 				07347A7F1D1C63070040457E /* StringTools.framework in Embed Frameworks */,
@@ -103,12 +107,14 @@
 		075AFE831D1C668D00382E4A /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		075AFE851D1C66AE00382E4A /* PerformerSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformerSelectionViewController.swift; sourceTree = "<group>"; };
 		07611A731D241B33008C6C4F /* InstrumentKind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstrumentKind.swift; sourceTree = "<group>"; };
+		07611A751D242303008C6C4F /* ProgressBar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ProgressBar.framework; path = Carthage/Build/iOS/ProgressBar.framework; sourceTree = "<group>"; };
 		0766716B1D1C589E002181B1 /* givenName-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "givenName-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0766716E1D1C589E002181B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		076671731D1C589E002181B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		076671751D1C589E002181B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		076671781D1C589E002181B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0766717A1D1C589E002181B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07FFCAA21D252ED400F29EC4 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 				07347A681D1C63070040457E /* Color.framework in Frameworks */,
 				07347A591D1C62FC0040457E /* EnumTools.framework in Frameworks */,
 				07347A5B1D1C62FC0040457E /* GraphicsTools.framework in Frameworks */,
+				07611A761D242303008C6C4F /* ProgressBar.framework in Frameworks */,
 				07347A661D1C63070040457E /* ArrayTools.framework in Frameworks */,
 				07347A821D1C63070040457E /* TreeTools.framework in Frameworks */,
 				07347A721D1C63070040457E /* GraphicsTools.framework in Frameworks */,
@@ -181,6 +188,7 @@
 		0766716D1D1C589E002181B1 /* givenName-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				07FFCAA11D252EC900F29EC4 /* UI */,
 				07611A721D241B33008C6C4F /* Common */,
 				075AFE791D1C64E800382E4A /* ViewControllers */,
 				0766716E1D1C589E002181B1 /* AppDelegate.swift */,
@@ -195,6 +203,7 @@
 		0766719C1D1C5987002181B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07611A751D242303008C6C4F /* ProgressBar.framework */,
 				07347A441D1C62FC0040457E /* ArithmeticTools.framework */,
 				07347A451D1C62FC0040457E /* ArrayTools.framework */,
 				07347A461D1C62FC0040457E /* Color.framework */,
@@ -213,6 +222,14 @@
 				07347A531D1C62FC0040457E /* TreeTools.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07FFCAA11D252EC900F29EC4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				07FFCAA21D252ED400F29EC4 /* Button.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +324,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/StringTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Timeline.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TreeTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ProgressBar.framework",
 			);
 			outputPaths = (
 			);
@@ -322,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				075AFE861D1C66AE00382E4A /* PerformerSelectionViewController.swift in Sources */,
+				07FFCAA31D252ED400F29EC4 /* Button.swift in Sources */,
 				075AFE841D1C668D00382E4A /* InstructionsViewController.swift in Sources */,
 				0766716F1D1C589E002181B1 /* AppDelegate.swift in Sources */,
 				07611A741D241B33008C6C4F /* InstrumentKind.swift in Sources */,

@@ -8,15 +8,14 @@
 
 import UIKit
 
+/**
+ - TODO: Instructions
+ */
 final class InstructionsViewController: UIViewController {
     
     // Instructions TextView
-    // Start button (-> ScoreViewController)
     
     let instrumentKind: InstrumentKind
-    
-    // start button
-    // back button
     
     init(instrumentKind: InstrumentKind) {
         self.instrumentKind = instrumentKind
@@ -29,18 +28,39 @@ final class InstructionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.blackColor()
         createStartButton()
+        createBackButton()
     }
     
     private func createStartButton() {
-        
+        let startButton = Button(
+            center: CGPoint(x: view.frame.midX, y: view.frame.height - 0.5 * 50),
+            title: "Start",
+            selector: #selector(showScoreViewController)
+        )
+        view.addSubview(startButton)
+    }
+    
+    private func createBackButton() {
+        let backButton = Button(
+            center: CGPoint(x: 0.5 * 100, y: view.frame.height - 0.5 * 50),
+            title: "Back",
+            selector: #selector(returnToPerformerSelectionViewController)
+        )
+        view.addSubview(backButton)
     }
     
     @objc private func returnToPerformerSelectionViewController() {
-        // let view ...
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewControllerWithIdentifier(
+            "PerformerSelectionViewController"
+        )
+        showViewController(viewController, sender: self)
     }
     
     @objc private func showScoreViewController() {
-        // let view ...
+        let viewController = ScoreViewController(instrumentKind: instrumentKind)
+        showViewController(viewController, sender: self)
     }
 }

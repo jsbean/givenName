@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		071892221D12CAD300935B86 /* Staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E16BD71D10551100D41FE7 /* Staff.framework */; };
 		071FCCDC1D12CFB30043EA81 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD11D12CFB30043EA81 /* ArrayTools.framework */; };
 		071FCCE21D12CFB30043EA81 /* Pitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD71D12CFB30043EA81 /* Pitch.framework */; };
 		071FCCE31D12CFB30043EA81 /* PitchSpellingTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD81D12CFB30043EA81 /* PitchSpellingTools.framework */; };
-		071FCCE41D12CFB30043EA81 /* StaffSpaceConfigurable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD91D12CFB30043EA81 /* StaffSpaceConfigurable.framework */; };
 		071FCCE61D12CFBF0043EA81 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD01D12CFB30043EA81 /* ArithmeticTools.framework */; };
 		071FCCEA1D12CFBF0043EA81 /* Color.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD21D12CFB30043EA81 /* Color.framework */; };
 		071FCCEC1D12CFBF0043EA81 /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD31D12CFB30043EA81 /* EnumTools.framework */; };
@@ -19,23 +17,12 @@
 		071FCCF01D12CFBF0043EA81 /* GraphicsTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD51D12CFB30043EA81 /* GraphicsTools.framework */; };
 		071FCCF21D12CFBF0043EA81 /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCD61D12CFB30043EA81 /* PathTools.framework */; };
 		071FCCFA1D12CFBF0043EA81 /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 071FCCDA1D12CFB30043EA81 /* StringTools.framework */; };
-		078CFC4C1D130003001559C9 /* ArithmeticTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC411D130003001559C9 /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC4D1D130003001559C9 /* ArrayTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC421D130003001559C9 /* ArrayTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC4E1D130003001559C9 /* Color.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC431D130003001559C9 /* Color.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC4F1D130003001559C9 /* EnumTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC441D130003001559C9 /* EnumTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC501D130003001559C9 /* Graph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC451D130003001559C9 /* Graph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC511D130003001559C9 /* GraphicsTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC461D130003001559C9 /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC521D130003001559C9 /* PathTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC471D130003001559C9 /* PathTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC531D130003001559C9 /* Pitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC481D130003001559C9 /* Pitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC541D130003001559C9 /* PitchSpellingTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC491D130003001559C9 /* PitchSpellingTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC551D130003001559C9 /* StaffSpaceConfigurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC4A1D130003001559C9 /* StaffSpaceConfigurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078CFC561D130003001559C9 /* StringTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 078CFC4B1D130003001559C9 /* StringTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07E16BC61D10550900D41FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E16BC51D10550900D41FE7 /* AppDelegate.swift */; };
 		07E16BC81D10550900D41FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E16BC71D10550900D41FE7 /* ViewController.swift */; };
 		07E16BCB1D10550900D41FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E16BC91D10550900D41FE7 /* Main.storyboard */; };
 		07E16BCD1D10550900D41FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E16BCC1D10550900D41FE7 /* Assets.xcassets */; };
 		07E16BD01D10550900D41FE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07E16BCE1D10550900D41FE7 /* LaunchScreen.storyboard */; };
-		07E16BD91D10551100D41FE7 /* Staff.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07E16BD71D10551100D41FE7 /* Staff.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		07E1C0FB1D19F55900B3A480 /* Staff.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07E1C0FA1D19F55900B3A480 /* Staff.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,18 +32,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				07E16BD91D10551100D41FE7 /* Staff.framework in Embed Frameworks */,
-				078CFC4C1D130003001559C9 /* ArithmeticTools.framework in Embed Frameworks */,
-				078CFC4D1D130003001559C9 /* ArrayTools.framework in Embed Frameworks */,
-				078CFC4E1D130003001559C9 /* Color.framework in Embed Frameworks */,
-				078CFC4F1D130003001559C9 /* EnumTools.framework in Embed Frameworks */,
-				078CFC501D130003001559C9 /* Graph.framework in Embed Frameworks */,
-				078CFC511D130003001559C9 /* GraphicsTools.framework in Embed Frameworks */,
-				078CFC521D130003001559C9 /* PathTools.framework in Embed Frameworks */,
-				078CFC531D130003001559C9 /* Pitch.framework in Embed Frameworks */,
-				078CFC541D130003001559C9 /* PitchSpellingTools.framework in Embed Frameworks */,
-				078CFC551D130003001559C9 /* StaffSpaceConfigurable.framework in Embed Frameworks */,
-				078CFC561D130003001559C9 /* StringTools.framework in Embed Frameworks */,
+				07E1C0FB1D19F55900B3A480 /* Staff.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 1;
@@ -73,19 +49,7 @@
 		071FCCD61D12CFB30043EA81 /* PathTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PathTools.framework; path = "/Users/BEAN/dn-m/Frameworks/Staff/StaffDemo-iOS/PathTools.framework"; sourceTree = "<absolute>"; };
 		071FCCD71D12CFB30043EA81 /* Pitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pitch.framework; path = "/Users/BEAN/dn-m/Frameworks/Staff/StaffDemo-iOS/Pitch.framework"; sourceTree = "<absolute>"; };
 		071FCCD81D12CFB30043EA81 /* PitchSpellingTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PitchSpellingTools.framework; path = "/Users/BEAN/dn-m/Frameworks/Staff/StaffDemo-iOS/PitchSpellingTools.framework"; sourceTree = "<absolute>"; };
-		071FCCD91D12CFB30043EA81 /* StaffSpaceConfigurable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StaffSpaceConfigurable.framework; path = "/Users/BEAN/dn-m/Frameworks/Staff/StaffDemo-iOS/StaffSpaceConfigurable.framework"; sourceTree = "<absolute>"; };
 		071FCCDA1D12CFB30043EA81 /* StringTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringTools.framework; path = "/Users/BEAN/dn-m/Frameworks/Staff/StaffDemo-iOS/StringTools.framework"; sourceTree = "<absolute>"; };
-		078CFC411D130003001559C9 /* ArithmeticTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArithmeticTools.framework; path = ../Carthage/Build/iOS/ArithmeticTools.framework; sourceTree = "<group>"; };
-		078CFC421D130003001559C9 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = ../Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
-		078CFC431D130003001559C9 /* Color.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Color.framework; path = ../Carthage/Build/iOS/Color.framework; sourceTree = "<group>"; };
-		078CFC441D130003001559C9 /* EnumTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EnumTools.framework; path = ../Carthage/Build/iOS/EnumTools.framework; sourceTree = "<group>"; };
-		078CFC451D130003001559C9 /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graph.framework; path = ../Carthage/Build/iOS/Graph.framework; sourceTree = "<group>"; };
-		078CFC461D130003001559C9 /* GraphicsTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTools.framework; path = ../Carthage/Build/iOS/GraphicsTools.framework; sourceTree = "<group>"; };
-		078CFC471D130003001559C9 /* PathTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PathTools.framework; path = ../Carthage/Build/iOS/PathTools.framework; sourceTree = "<group>"; };
-		078CFC481D130003001559C9 /* Pitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pitch.framework; path = ../Carthage/Build/iOS/Pitch.framework; sourceTree = "<group>"; };
-		078CFC491D130003001559C9 /* PitchSpellingTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PitchSpellingTools.framework; path = ../Carthage/Build/iOS/PitchSpellingTools.framework; sourceTree = "<group>"; };
-		078CFC4A1D130003001559C9 /* StaffSpaceConfigurable.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StaffSpaceConfigurable.framework; path = ../Carthage/Build/iOS/StaffSpaceConfigurable.framework; sourceTree = "<group>"; };
-		078CFC4B1D130003001559C9 /* StringTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StringTools.framework; path = ../Carthage/Build/iOS/StringTools.framework; sourceTree = "<group>"; };
 		07E16BC21D10550900D41FE7 /* StaffDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StaffDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E16BC51D10550900D41FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07E16BC71D10550900D41FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +57,7 @@
 		07E16BCC1D10550900D41FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07E16BCF1D10550900D41FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07E16BD11D10550900D41FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07E16BD71D10551100D41FE7 /* Staff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Staff.framework; path = "/Users/BEAN/Library/Developer/Xcode/DerivedData/Staff-dxbmeepqurwflfgsonblbyvxzokq/Build/Products/Debug-iphonesimulator/Staff.framework"; sourceTree = "<absolute>"; };
+		07E1C0FA1D19F55900B3A480 /* Staff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Staff.framework; path = "/Users/BEAN/Library/Developer/Xcode/DerivedData/Staff-dxbmeepqurwflfgsonblbyvxzokq/Build/Products/Debug-iphoneos/Staff.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +67,6 @@
 			files = (
 				071FCCF01D12CFBF0043EA81 /* GraphicsTools.framework in Frameworks */,
 				071FCCF21D12CFBF0043EA81 /* PathTools.framework in Frameworks */,
-				071FCCE41D12CFB30043EA81 /* StaffSpaceConfigurable.framework in Frameworks */,
 				071FCCEA1D12CFBF0043EA81 /* Color.framework in Frameworks */,
 				071FCCEC1D12CFBF0043EA81 /* EnumTools.framework in Frameworks */,
 				071FCCDC1D12CFB30043EA81 /* ArrayTools.framework in Frameworks */,
@@ -111,7 +74,6 @@
 				071FCCE31D12CFB30043EA81 /* PitchSpellingTools.framework in Frameworks */,
 				071FCCEE1D12CFBF0043EA81 /* Graph.framework in Frameworks */,
 				071FCCE21D12CFB30043EA81 /* Pitch.framework in Frameworks */,
-				071892221D12CAD300935B86 /* Staff.framework in Frameworks */,
 				071FCCFA1D12CFBF0043EA81 /* StringTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,18 +84,7 @@
 		07E16BB91D10550900D41FE7 = {
 			isa = PBXGroup;
 			children = (
-				078CFC411D130003001559C9 /* ArithmeticTools.framework */,
-				078CFC421D130003001559C9 /* ArrayTools.framework */,
-				078CFC431D130003001559C9 /* Color.framework */,
-				078CFC441D130003001559C9 /* EnumTools.framework */,
-				078CFC451D130003001559C9 /* Graph.framework */,
-				078CFC461D130003001559C9 /* GraphicsTools.framework */,
-				078CFC471D130003001559C9 /* PathTools.framework */,
-				078CFC481D130003001559C9 /* Pitch.framework */,
-				078CFC491D130003001559C9 /* PitchSpellingTools.framework */,
-				078CFC4A1D130003001559C9 /* StaffSpaceConfigurable.framework */,
-				078CFC4B1D130003001559C9 /* StringTools.framework */,
-				07E16BD71D10551100D41FE7 /* Staff.framework */,
+				07E1C0FA1D19F55900B3A480 /* Staff.framework */,
 				07E16BC41D10550900D41FE7 /* StaffDemo-iOS */,
 				07E16BC31D10550900D41FE7 /* Products */,
 			);
@@ -171,7 +122,7 @@
 				07E16BBF1D10550900D41FE7 /* Frameworks */,
 				07E16BC01D10550900D41FE7 /* Resources */,
 				07E16BDA1D10551100D41FE7 /* Embed Frameworks */,
-				071FCCFC1D12D0120043EA81 /* ShellScript */,
+				071FCCFC1D12D0120043EA81 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -230,7 +181,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		071FCCFC1D12D0120043EA81 /* ShellScript */ = {
+		071FCCFC1D12D0120043EA81 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,9 +196,9 @@
 				"$(SRCROOT)/../Carthage/Build/iOS/PathTools.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/Pitch.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/PitchSpellingTools.framework",
-				"$(SRCROOT)/../Carthage/Build/iOS/StaffSpaceConfigurable.framework",
 				"$(SRCROOT)/../Carthage/Build/iOS/StringTools.framework",
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;

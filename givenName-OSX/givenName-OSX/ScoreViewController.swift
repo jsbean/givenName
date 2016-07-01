@@ -8,14 +8,12 @@
 
 import AppKit
 import Timeline
+import ProgressBar
 import Pitch
 import PitchSpellingTools
-import ProgressBar
 import Staff
 
 // Buttons:
-// Back button (-> InstructionsViewController)
-// Pause button (-> pauseTimeline)
 // Skip forward button (-> try timeline.jump(amount: Seconds))
 // Skip backward button (-> try timeline.jump(amount: Seconds))
 
@@ -29,7 +27,7 @@ final class ScoreViewController: NSViewController {
     var pauseResumeButton: NSButton!
     var progressBar: ProgressBar!
     
-    var isPaused: Bool = false
+//    var isPaused: Bool = false
 
     // Music notational elements
     var staff: StaffLayer = StaffLayer(identifier: "staff", staffSpaceHeight: 20)
