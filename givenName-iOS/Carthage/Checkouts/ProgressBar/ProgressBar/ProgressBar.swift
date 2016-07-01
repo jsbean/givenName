@@ -88,6 +88,7 @@ public final class ProgressBar {
      You may optionally set the initial width.
      */
     public func start(from width: CGFloat = 0, for duration: Double) {
+        durationProgressed = 0
         fullDuration = duration
         resume(for: duration)
     }
