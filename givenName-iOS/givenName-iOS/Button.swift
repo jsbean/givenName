@@ -11,10 +11,11 @@ import UIKit
 final class Button: UIButton {
     
     init(center: CGPoint, title: String, selector: Selector) {
-        let size = CGSize(width: 100, height: 50)
+        let size = CGSize(width: 100, height: 100)
         let origin = CGPoint(x: center.x - 0.5 * size.width, y: center.y - 0.5 * size.height)
         super.init(frame: CGRect(origin: origin, size: size))
         self.setTitle(title, forState: .Normal)
+        self.titleLabel!.font = UIFont(name: "Helvetica", size: 24)
         self.addTarget(nil, action: selector, forControlEvents: .TouchUpInside)
     }
     

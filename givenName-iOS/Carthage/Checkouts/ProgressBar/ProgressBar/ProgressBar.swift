@@ -89,8 +89,12 @@ public final class ProgressBar {
      */
     public func start(from width: CGFloat = 0, for duration: Double) {
         fullDuration = duration
-        lastResumedDuration = CACurrentMediaTime()
+        resume(for: duration)
+    }
+    
+    public func resume(from width: CGFloat = 0, for duration: Double) {
         isProgressing = true
+        lastResumedDuration = CACurrentMediaTime()
         configureLayer()
         animateLayer(for: duration, from: width, to: fullWidth)
     }
@@ -99,15 +103,16 @@ public final class ProgressBar {
      Stop the progression.
      */
     public func stop() {
+        isProgressing = false
         layer.removeAllAnimations()
         layer.frame = CGRect(x: origin.x, y: origin.y, width: 0, height: height)
-        isProgressing = false
     }
     
     /**
      Switch from paused or resumed states.
      */
     public func pauseOrResume() {
+        print("pause or resume: full dur: \(fullDuration); dur prog: \(durationProgressed); cur pos: \(currentPosition); lastResumedDur: \(lastResumedDuration); currentWidth: \(currentWidth)")
         guard durationProgressed < fullDuration else { return }
         isProgressing ? pause() : resume()
     }
@@ -116,8 +121,9 @@ public final class ProgressBar {
      Pause animation.
      */
     public func pause() {
-        durationProgressed += CACurrentMediaTime() - lastResumedDuration
+        print("pause: full dur: \(fullDuration); dur prog: \(durationProgressed); cur pos: \(currentPosition); lastResumedDur: \(lastResumedDuration); currentWidth: \(currentWidth)")
         isProgressing = false
+        durationProgressed += CACurrentMediaTime() - lastResumedDuration
         guard let currentFrame = layer.presentationLayer()?.frame else { return }
         layer.frame = currentFrame
         layer.speed = 0
@@ -127,9 +133,11 @@ public final class ProgressBar {
      Resume animation.
      */
     public func resume() {
+        print("resume: full dur: \(fullDuration); dur prog: \(durationProgressed); cur pos: \(currentPosition); lastResumedDur: \(lastResumedDuration); currentWidth: \(currentWidth)")
+        isProgressing = true
         lastResumedDuration = CACurrentMediaTime()
         configureLayer(width: currentWidth)
-        start(from: currentWidth, for: durationRemaining)
+        resume(from: currentWidth, for: durationRemaining)
     }
     
     private func configureLayer(width width: CGFloat = 0) {

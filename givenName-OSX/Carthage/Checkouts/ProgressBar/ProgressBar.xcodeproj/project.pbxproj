@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		078B01611D22C08700F34BB6 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B01601D22C08700F34BB6 /* ProgressBar.swift */; };
 		078B01621D22C08700F34BB6 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078B01601D22C08700F34BB6 /* ProgressBar.swift */; };
-		2F8DDFBCC551D0E195A8DE84 /* ProgressBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 435BA8FF22480D111298B96F /* ProgressBar.framework */; };
+		2F8DDFBCC551D0E195A8DE84 /* ProgressBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 435BA8FF22480D111298B96F /* ProgressBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5332B8E29725DF7BB339EA90 /* ProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBDD98BCEDF0088DB688123 /* ProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64FA786F7B44CCCF8161B183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F00D0CD5E555D2095C1A126 /* Foundation.framework */; };
 		7324203A255E570119C43AF5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF560EFA96429C91D795AA5C /* Cocoa.framework */; };
 		A7DE3F8DFF3080EE94275A91 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF560EFA96429C91D795AA5C /* Cocoa.framework */; };
 		A9C889D194E124325E1600AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F00D0CD5E555D2095C1A126 /* Foundation.framework */; };
-		F686D156B3FEE79B687255AA /* ProgressBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87E777E546C3F20C88DBA371 /* ProgressBar.framework */; };
+		F686D156B3FEE79B687255AA /* ProgressBar.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 87E777E546C3F20C88DBA371 /* ProgressBar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FC93B94F958CD436F36FD50C /* ProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBDD98BCEDF0088DB688123 /* ProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -289,7 +289,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = 9DC3CEA8333EB62B77CEC3B4 /* Build configuration list for PBXProject "ProgressBar" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -509,6 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ProgressBar;
 				PRODUCT_NAME = ProgressBar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -538,6 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ProgressBar;
 				PRODUCT_NAME = ProgressBar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -566,6 +568,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ProgressBar;
 				PRODUCT_NAME = ProgressBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -594,6 +597,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ProgressBar;
 				PRODUCT_NAME = ProgressBar;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;

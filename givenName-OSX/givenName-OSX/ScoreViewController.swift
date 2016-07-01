@@ -220,7 +220,13 @@ final class ScoreViewController: NSViewController {
         }
     }
     
-    private func addEvent(to timeline: Timeline, withPitch pitch: Float, from start: Seconds, to end: Seconds) {
+    private func addEvent(
+        to timeline: Timeline,
+        withPitch pitch: Float,
+        from start: Seconds,
+        to end: Seconds
+    )
+    {
         timeline.add(at: start) { self.show(pitch: pitch) }
         timeline.add(at: start) { self.progressBar.start(for: end - start) }
         timeline.add(at: end) { self.hideStaff() }

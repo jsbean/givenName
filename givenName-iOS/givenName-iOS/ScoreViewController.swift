@@ -116,7 +116,6 @@ final class ScoreViewController: UIViewController {
         return t
     }()
 
-    
     let instrumentKind: InstrumentKind
     
     init(instrumentKind: InstrumentKind) {
@@ -133,15 +132,15 @@ final class ScoreViewController: UIViewController {
         view.layer.backgroundColor = UIColor.blackColor().CGColor
         createBackButton()
         createPauseResumeButton()
-        configureProgressBar()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        let staff = makeStaff()
+        configureProgressBar()
         timeline.start()
     }
 
+    // TODO: factor to common somehow, would require protocols
     private func addEvent(
         to timeline: Timeline,
         withPitch pitch: Float,
@@ -149,7 +148,9 @@ final class ScoreViewController: UIViewController {
         to end: Seconds
     )
     {
-        
+        timeline.add(at: start) { self.show(pitch: pitch) }
+        timeline.add(at: start) { self.progressBar.start(for: end - start) }
+        timeline.add(at: end) { self.hideStaff() }
     }
     
     private func configureProgressBar() {
@@ -185,19 +186,31 @@ final class ScoreViewController: UIViewController {
     }
     
     private func positionProgressBar() {
-        // todo
+        // todo: upon layout
     }
     
     private func positionButtons() {
-        // todo
+        // todo: upon layout
     }
     
     private func show(pitch pitch: Float) {
-        
+        let staff = makeStaff() // ensure clean staff
+        let transposition = instrumentKind.transposition
+        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch + transposition))
+        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
+        let event = StaffEvent(
+            staffSpaceHeight: 20,
+            representablePitchCollection: StaffRepresentablePitchCollection(
+                [
+                    StaffRepresentablePitchContext(spelledPitch)!
+                ]
+            )
+        )
+        staff.addEvent(event, at: 100)
     }
     
     private func hideStaff() {
-        // todo
+        staff.removeFromSuperlayer()
     }
     
     private func makeStaff() -> StaffLayer {
@@ -213,10 +226,16 @@ final class ScoreViewController: UIViewController {
     }
     
     @objc private func pauseOrResumeTimeline() {
-        print("pause or resume timeline")
+        if timeline.isActive {
+            timeline.pause()
+            progressBar.pause()
+            pauseResumeButton.setTitle("Resume", forState: .Normal)
+        } else {
+            timeline.resume()
+            progressBar.resume()
+            pauseResumeButton.setTitle("Pause", forState: .Normal)
+        }
     }
-    
-
 
     override func prefersStatusBarHidden() -> Bool {
         return true
@@ -227,4 +246,3 @@ final class ScoreViewController: UIViewController {
         showViewController(viewController, sender: self)
     }
 }
-
