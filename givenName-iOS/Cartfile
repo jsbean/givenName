@@ -1,4 +1,3 @@
-github "jpsim/PeerKit"
-github "dn-m/Staff"
-github "dn-m/Timeline"
-github "dn-m/ProgressBar"
+github "dn-m/Staff" "no-nested-frameworks"
+github "dn-m/Timeline" "no-nested-frameworks"
+github "dn-m/ProgressBar" "no-contains-swift-code"

@@ -10,60 +10,108 @@ import Foundation
 import QuartzCore
 import DictionaryTools
 
-public typealias Tempo = Double
-public typealias Seconds = Double
-public typealias Frames = UInt
+/// Function to be performed by a `Timeline`.
 public typealias Action = () -> ()
 
+/// Time unit for beats-per-minute.
+public typealias Tempo = Double
+
+/// Time unit for seconds.
+public typealias Seconds = Double
+
+/// Time unit inverse to the `rate` of a `Timeline`.
+internal typealias Frames = UInt
+
+
 /**
- Timeline
+ Scheduler that performs functions at given times.
  
- - TODO: Conform to `SequenceType` & `CollectionType`, make `regsitry` private.
+ **Examples:**
+ 
+ Schedule singular, atomic events at a given time in `Seconds`:
+ 
+ ```
+ let timeline = Timeline()
+ timeline.add(at: 1) { print("one second") }
+ timeline.start()
+ 
+ // after one second:
+ // => one second
+ ```
+ 
+ Schedule a looping action with a time interval between firings:
+ 
+ ```
+ timeline.addLooping(interval: 1) { print("every second") }
+ 
+ // after one second:
+ // => every second
+ // after two seconds:
+ // => every second
+ ...
+ ```
+ 
+ Schedule a looping action at a tempo in beats-per-minute:
+ 
+ ```
+ timeline.addLooping(at: 60) { print("bpm: 60") }
+ ```
+ 
+ Schedule a looping action with an optional offset:
+ 
+ ```
+ timeline.addLooping(at: 60) { self.showMetronome() }
+ timeline.addLooping(at: 60, offset: 0.2) { self.hideMetronome() }
+ ```
+ 
+ - TODO: Conform to `SequenceType` & `CollectionType`.
 */
 public final class Timeline {
     
-    // Storage
-    public var registry = SortedOrderedDictionary<[ActionType], Frames>()
+    // MARK: - Instance Properties
+
+    /// - returns: `true` if the internal timer is running. Otherwise, `false`.
+    public var isActive: Bool = false
+    
+    /// Offset in `Seconds` of internal timer.
+    public var currentOffset: Seconds {
+        return seconds(from: currentFrame)
+    }
+    
+    /// Amount of time in `Seconds` until the next event, if present. Otherwise, `nil`.
+    public var secondsUntilNext: Seconds? {
+        guard let nextFrames = next()?.0 else { return nil }
+        return seconds(from: nextFrames - currentFrame)
+    }
+    
+    /// Offset in `Seconds` of the next event, if present. Otherwise, `nil`.
+    public var offsetOfNext: Seconds? {
+        guard let next = next() else { return nil }
+        return seconds(from: next.0)
+    }
+    
+    // Storage of actions.
+    internal var registry = SortedOrderedDictionary<[ActionType], Frames>()
     
     // Internal timer
     private var timer: NSTimer = NSTimer()
     
     // Start time
     private var startTime: Seconds = 0
-
-    // If the timer is currently running
-    public var isActive: Bool = false
     
     // The amount of time in seconds that has elapsed since starting or resuming from paused.
     private var secondsElapsed: Seconds {
         return CACurrentMediaTime() - startTime
     }
-    
-    // How often the timer should advance.
-    private let rate: Seconds
-    
+
     // The inverted rate.
     private var interval: Seconds { return 1 / rate }
     
-    // make private -- internal only for testing
+    // - make private -- internal only for testing
     internal var currentFrame: Frames = 0
-
-    // Offset in seconds of timer.
-    public var currentOffset: Seconds {
-        return seconds(from: currentFrame)
-    }
     
-    // Amount of time in seconds until the next event, if present. Otherwise, `nil`.
-    public var secondsUntilNext: Seconds? {
-        guard let nextFrames = next()?.0 else { return nil }
-        return seconds(from: nextFrames - currentFrame)
-    }
-    
-    // Offset in seconds of the next event, if present. Otherwise, `nil`.
-    public var offsetOfNext: Seconds? {
-        guard let next = next() else { return nil }
-        return seconds(from: next.0)
-    }
+    // How often the timer should advance.
+    private let rate: Seconds
     
     // MARK: - Initializers
     
@@ -76,7 +124,7 @@ public final class Timeline {
     
     // MARK: - Instance Methods
     
-    // MARK: Modifying the actions in the timeline
+    // MARK: Modifying the timeline
     
     /**
      Add a given `action` at a given `timeStamp` in seconds.
@@ -124,7 +172,7 @@ public final class Timeline {
         registry = SortedOrderedDictionary()
     }
     
-    // MARK: Operating the timeline.
+    // MARK: Operating the timeline
     
     /**
      Start the timeline.
@@ -151,7 +199,6 @@ public final class Timeline {
     public func pause() {
         timer.invalidate()
         isActive = false
-        startTime = CACurrentMediaTime()
     }
     
     /**
@@ -161,6 +208,7 @@ public final class Timeline {
         if isActive { return }
         timer = makeTimer()
         isActive = true
+        startTime = CACurrentMediaTime()
     }
     
     /**
@@ -169,6 +217,14 @@ public final class Timeline {
     public func skip(to time: Seconds) {
         pause()
         currentFrame = frames(from: time)
+    }
+    
+    internal func next() -> (Frames, [ActionType])? {
+        return registry
+            .lazy
+            .filter { $0.0 > self.currentFrame }
+            .sort { $0.0 < $1.0 }
+            .first
     }
     
     private func makeTimer() -> NSTimer {
@@ -203,18 +259,6 @@ public final class Timeline {
     
     private func seconds(from frames: Frames) -> Seconds {
         return Seconds(frames) / interval
-    }
-}
-
-extension Timeline: GeneratorType {
-    
-    // update to self.filter when sequenceType conformance occurs
-    public func next() -> (Frames, [ActionType])? {
-        return registry
-            .lazy
-            .filter { $0.0 > self.currentFrame }
-            .sort { $0.0 < $1.0 }
-            .first
     }
 }
 

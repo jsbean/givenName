@@ -76,7 +76,7 @@ final class ScoreViewController: NSViewController {
             self.addEvent(to: t, withPitch: 58, from: 2.5 * 60, to: 3.333 * 60)
             t.add(at: 3.333 * 60) { self.progressBar.start(for: (3.666 - 3.333) * 60 ) }
             self.addEvent(to: t, withPitch: 58, from: 3.666 * 60, to: 4.5 * 60)
-            t.add(at: 3.666 * 60) { self.progressBar.start(for: (6.666 - 3.666) * 60 ) }
+            t.add(at: 3.666 * 60) { self.progressBar.start(for: (6.666 - 4.5) * 60 ) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 78, from: 6.666 * 60, to: 7.5 * 60)

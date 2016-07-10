@@ -8,15 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		07347A541D1C62FC0040457E /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A441D1C62FC0040457E /* ArithmeticTools.framework */; };
-		07347A581D1C62FC0040457E /* EnsembleTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A481D1C62FC0040457E /* EnsembleTools.framework */; };
 		07347A591D1C62FC0040457E /* EnumTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A491D1C62FC0040457E /* EnumTools.framework */; };
-		07347A5B1D1C62FC0040457E /* GraphicsTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4B1D1C62FC0040457E /* GraphicsTools.framework */; };
-		07347A5D1D1C62FC0040457E /* PeerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4D1D1C62FC0040457E /* PeerKit.framework */; };
 		07347A5E1D1C62FC0040457E /* Pitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4E1D1C62FC0040457E /* Pitch.framework */; };
 		07347A5F1D1C62FC0040457E /* PitchSpellingTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4F1D1C62FC0040457E /* PitchSpellingTools.framework */; };
 		07347A601D1C62FC0040457E /* Staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A501D1C62FC0040457E /* Staff.framework */; };
 		07347A611D1C62FC0040457E /* StringTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A511D1C62FC0040457E /* StringTools.framework */; };
-		07347A641D1C63070040457E /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A441D1C62FC0040457E /* ArithmeticTools.framework */; };
 		07347A651D1C63070040457E /* ArithmeticTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A441D1C62FC0040457E /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A661D1C63070040457E /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A451D1C62FC0040457E /* ArrayTools.framework */; };
 		07347A671D1C63070040457E /* ArrayTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A451D1C62FC0040457E /* ArrayTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -33,10 +29,8 @@
 		07347A731D1C63070040457E /* GraphicsTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4B1D1C62FC0040457E /* GraphicsTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A741D1C63070040457E /* PathTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4C1D1C62FC0040457E /* PathTools.framework */; };
 		07347A751D1C63070040457E /* PathTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4C1D1C62FC0040457E /* PathTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		07347A771D1C63070040457E /* PeerKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4D1D1C62FC0040457E /* PeerKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A791D1C63070040457E /* Pitch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4E1D1C62FC0040457E /* Pitch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A7B1D1C63070040457E /* PitchSpellingTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A4F1D1C62FC0040457E /* PitchSpellingTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		07347A7C1D1C63070040457E /* Staff.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A501D1C62FC0040457E /* Staff.framework */; };
 		07347A7D1D1C63070040457E /* Staff.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A501D1C62FC0040457E /* Staff.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A7F1D1C63070040457E /* StringTools.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A511D1C62FC0040457E /* StringTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07347A801D1C63070040457E /* Timeline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07347A521D1C62FC0040457E /* Timeline.framework */; };
@@ -59,7 +53,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		07347A841D1C63080040457E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
@@ -78,11 +72,10 @@
 				07347A6D1D1C63070040457E /* EnsembleTools.framework in Embed Frameworks */,
 				07347A7D1D1C63070040457E /* Staff.framework in Embed Frameworks */,
 				07347A7F1D1C63070040457E /* StringTools.framework in Embed Frameworks */,
-				07347A771D1C63070040457E /* PeerKit.framework in Embed Frameworks */,
 				07347A7B1D1C63070040457E /* PitchSpellingTools.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -96,7 +89,6 @@
 		07347A4A1D1C62FC0040457E /* Graph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Graph.framework; path = Carthage/Build/iOS/Graph.framework; sourceTree = "<group>"; };
 		07347A4B1D1C62FC0040457E /* GraphicsTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTools.framework; path = Carthage/Build/iOS/GraphicsTools.framework; sourceTree = "<group>"; };
 		07347A4C1D1C62FC0040457E /* PathTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PathTools.framework; path = Carthage/Build/iOS/PathTools.framework; sourceTree = "<group>"; };
-		07347A4D1D1C62FC0040457E /* PeerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PeerKit.framework; path = Carthage/Build/iOS/PeerKit.framework; sourceTree = "<group>"; };
 		07347A4E1D1C62FC0040457E /* Pitch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pitch.framework; path = Carthage/Build/iOS/Pitch.framework; sourceTree = "<group>"; };
 		07347A4F1D1C62FC0040457E /* PitchSpellingTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PitchSpellingTools.framework; path = Carthage/Build/iOS/PitchSpellingTools.framework; sourceTree = "<group>"; };
 		07347A501D1C62FC0040457E /* Staff.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Staff.framework; path = Carthage/Build/iOS/Staff.framework; sourceTree = "<group>"; };
@@ -125,22 +117,17 @@
 				07347A5E1D1C62FC0040457E /* Pitch.framework in Frameworks */,
 				07347A681D1C63070040457E /* Color.framework in Frameworks */,
 				07347A591D1C62FC0040457E /* EnumTools.framework in Frameworks */,
-				07347A5B1D1C62FC0040457E /* GraphicsTools.framework in Frameworks */,
 				07611A761D242303008C6C4F /* ProgressBar.framework in Frameworks */,
 				07347A661D1C63070040457E /* ArrayTools.framework in Frameworks */,
 				07347A821D1C63070040457E /* TreeTools.framework in Frameworks */,
 				07347A721D1C63070040457E /* GraphicsTools.framework in Frameworks */,
 				07347A541D1C62FC0040457E /* ArithmeticTools.framework in Frameworks */,
 				07347A801D1C63070040457E /* Timeline.framework in Frameworks */,
-				07347A581D1C62FC0040457E /* EnsembleTools.framework in Frameworks */,
 				07347A601D1C62FC0040457E /* Staff.framework in Frameworks */,
 				07347A701D1C63070040457E /* Graph.framework in Frameworks */,
 				07347A611D1C62FC0040457E /* StringTools.framework in Frameworks */,
 				07347A6A1D1C63070040457E /* DictionaryTools.framework in Frameworks */,
 				07347A741D1C63070040457E /* PathTools.framework in Frameworks */,
-				07347A7C1D1C63070040457E /* Staff.framework in Frameworks */,
-				07347A5D1D1C62FC0040457E /* PeerKit.framework in Frameworks */,
-				07347A641D1C63070040457E /* ArithmeticTools.framework in Frameworks */,
 				07347A5F1D1C62FC0040457E /* PitchSpellingTools.framework in Frameworks */,
 				07347A6C1D1C63070040457E /* EnsembleTools.framework in Frameworks */,
 			);
@@ -213,7 +200,6 @@
 				07347A4A1D1C62FC0040457E /* Graph.framework */,
 				07347A4B1D1C62FC0040457E /* GraphicsTools.framework */,
 				07347A4C1D1C62FC0040457E /* PathTools.framework */,
-				07347A4D1D1C62FC0040457E /* PeerKit.framework */,
 				07347A4E1D1C62FC0040457E /* Pitch.framework */,
 				07347A4F1D1C62FC0040457E /* PitchSpellingTools.framework */,
 				07347A501D1C62FC0040457E /* Staff.framework */,
@@ -317,7 +303,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Graph.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GraphicsTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PathTools.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/PeerKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Pitch.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/PitchSpellingTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Staff.framework",
@@ -459,6 +444,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -466,8 +454,9 @@
 				INFOPLIST_FILE = "givenName-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bean.givenName-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bean.givenName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -475,6 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -482,8 +474,10 @@
 				INFOPLIST_FILE = "givenName-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.bean.givenName-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bean.givenName;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

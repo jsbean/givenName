@@ -81,9 +81,9 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 50.0, 318.0, 43.0, 22.0 ],
+					"patching_rect" : [ 50.0, 318.0, 56.0, 22.0 ],
 					"style" : "",
-					"text" : "line 0."
+					"text" : "line 0. 0."
 				}
 
 			}
