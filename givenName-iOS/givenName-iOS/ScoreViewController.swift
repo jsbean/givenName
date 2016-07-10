@@ -169,7 +169,6 @@ final class ScoreViewController: UIViewController {
     }
     
     private func createBackButton() {
-        let width: CGFloat = 0
         backButton = Button(
             center: CGPoint(x: 0.5 * 100, y: view.frame.height - 0.5 * 50),
             title: "Back",
@@ -189,6 +188,7 @@ final class ScoreViewController: UIViewController {
     
     private func positionProgressBar() {
         // todo: upon layout
+        // todo: resize progressBar
     }
     
     private func positionButtons() {
