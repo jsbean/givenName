@@ -12,6 +12,8 @@ final class InstructionsViewController: UIViewController {
 
     var instrumentLabel: UILabel!
     var performanceNotes: UITextView!
+    var backButton: Button!
+    var startButton: Button!
     
     let instrumentKind: InstrumentKind
     
@@ -38,8 +40,8 @@ final class InstructionsViewController: UIViewController {
         super.viewDidLayoutSubviews()
         layoutInstrumentLabel()
         layoutPerformanceNotes()
-//        layoutStartButton()
-//        layoutBackButton()
+        layoutStartButton()
+        layoutBackButton()
     }
     
     private func layoutInstrumentLabel() {
@@ -106,8 +108,13 @@ final class InstructionsViewController: UIViewController {
         return result
     }
     
+    private func layoutStartButton() {
+        let center = CGPoint(x: view.frame.midX, y: view.frame.height - 0.5 * 50)
+        startButton.move(to: center)
+    }
+    
     private func createStartButton() {
-        let startButton = Button(
+        startButton = Button(
             center: CGPoint(x: view.frame.midX, y: view.frame.height - 0.5 * 50),
             title: "Start",
             selector: #selector(showScoreViewController)
@@ -115,8 +122,13 @@ final class InstructionsViewController: UIViewController {
         view.addSubview(startButton)
     }
     
+    private func layoutBackButton() {
+        let center = CGPoint(x: 0.5 * 100, y: view.frame.height - 0.5 * 50)
+        backButton.move(to: center)
+    }
+    
     private func createBackButton() {
-        let backButton = Button(
+        backButton = Button(
             center: CGPoint(x: 0.5 * 100, y: view.frame.height - 0.5 * 50),
             title: "Back",
             selector: #selector(returnToPerformerSelectionViewController)
