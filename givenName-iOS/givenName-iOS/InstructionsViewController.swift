@@ -9,6 +9,9 @@
 import UIKit
 
 final class InstructionsViewController: UIViewController {
+
+    var instrumentLabel: UILabel!
+    var performanceNodes: UITextView!
     
     let instrumentKind: InstrumentKind
     
@@ -30,16 +33,28 @@ final class InstructionsViewController: UIViewController {
         createPerformanceNotes()
     }
     
-    private func createInstrumentLabel() {
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        layoutInstrumentLabel()
+//        layoutPerformanceNotes()
+//        layoutStartButton()
+//        layoutBackButton()
+    }
+    
+    private func layoutInstrumentLabel() {
         let width: CGFloat = 500
-        let label = UILabel(
-            frame: CGRect(x: view.frame.midX - 0.5 * width, y: 0, width: width, height: 100)
-        )
-        label.textAlignment = .Center
-        label.font = UIFont(name: "Helvetica", size: 24)
-        label.text = instrumentKind.rawValue
-        label.textColor = UIColor.lightGrayColor()
-        view.addSubview(label)
+        instrumentLabel.frame = CGRect(x: view.frame.midX - 0.5 * width, y: 0, width: width, height: 100)
+    }
+    
+    private func createInstrumentLabel() {
+        instrumentLabel = UILabel()
+        layoutInstrumentLabel()
+        instrumentLabel.textAlignment = .Center
+        instrumentLabel.font = UIFont(name: "Helvetica", size: 24)
+        instrumentLabel.text = instrumentKind.rawValue
+        instrumentLabel.textColor = UIColor.lightGrayColor()
+        view.addSubview(instrumentLabel)
     }
 
     private func createPerformanceNotes() {
