@@ -31,10 +31,11 @@ final class InstructionsViewController: UIViewController {
         view.backgroundColor = UIColor.blackColor()
         createStartButton()
         createBackButton()
+        createInstrumentLabel()
         createPerformanceNotes()
     }
     
-    private func createPerformanceNotes() {
+    private func createInstrumentLabel() {
         let width: CGFloat = 500
         let label = UILabel(
             frame: CGRect(x: view.frame.midX - 0.5 * width, y: 0, width: width, height: 100)
@@ -42,8 +43,42 @@ final class InstructionsViewController: UIViewController {
         label.textAlignment = .Center
         label.font = UIFont(name: "Helvetica", size: 24)
         label.text = instrumentKind.rawValue
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.lightGrayColor()
         view.addSubview(label)
+    }
+
+    private func createPerformanceNotes() {
+        let padding: CGFloat = 50
+        let textView = UITextView(
+            frame: CGRect(
+                x: padding,
+                y: 150,
+                width: view.frame.width - 2 * padding,
+                height: 400
+            )
+        )
+        textView.font = UIFont(name: "Helvetica", size: 18)
+        textView.backgroundColor = UIColor.blackColor()
+        textView.textAlignment = .Center
+        textView.text = makePerformanceInstructions()
+        textView.textColor = UIColor.whiteColor()
+        view.addSubview(textView)
+    }
+    
+    private func makePerformanceInstructions() -> String {
+        var result = "Play absolutely as quietly as possible at all times, favoring failed actuation of tone over confident projection.\n\n"
+        switch instrumentKind {
+        case .cello, .violin:
+            result +=
+                "Continuously alter bow contact point (e.g., sul ponticello, sul tasto) to keep the sound from ever finding a consistent tone. Make it smokey.\n\n" +
+                "Change bow direction infrequently, though with durations never equivalent.\n\n" +
+            "Use the lowest string possible for the given pitch. For very high notes (particularly for the cello), use touch-fourth artificial harmonics.\n\n"
+        case .flute, .saxophone, .clarinet:
+            result +=
+                "Do your best to keep it quiet and and the tone as diffuse as possible.\n\n" +
+            "If it's your thing, feel free to circular breathe ad lib. Otherwise, to prevent certain death, take your time and breathe. Be sure, though, to make entrances and exits as soft and inconspicuous as possible. Hopefully the sound is already quite unreliable, so it isn't such a pronounced activity."
+        }
+        return result
     }
     
     private func createStartButton() {
