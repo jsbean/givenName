@@ -35,7 +35,6 @@ final class InstructionsViewController: UIViewController {
         createPerformanceNotes()
     }
     
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         layoutInstrumentLabel()
