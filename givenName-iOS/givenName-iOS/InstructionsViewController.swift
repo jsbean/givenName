@@ -52,7 +52,7 @@ final class InstructionsViewController: UIViewController {
         let textView = UITextView(
             frame: CGRect(
                 x: padding,
-                y: 150,
+                y: 100,
                 width: view.frame.width - 2 * padding,
                 height: 400
             )
