@@ -93,7 +93,7 @@ final class InstructionsViewController: UIViewController {
         case .flute, .saxophone, .clarinet:
             
             result +=
-                "Do your best to keep it quiet and and the tone as diffuse as possible.\n\n" +
+                "Do your best to keep it quiet and the tone as diffuse as possible.\n\n" +
             "If it's your thing, feel free to circular breathe ad lib. Otherwise, to prevent certain death, take your time and breathe. Be sure, though, to make entrances and exits as soft and inconspicuous as possible. Hopefully the sound is already quite unreliable, so it isn't such a pronounced activity."
             
         }
