@@ -11,7 +11,7 @@ import UIKit
 final class InstructionsViewController: UIViewController {
 
     var instrumentLabel: UILabel!
-    var performanceNodes: UITextView!
+    var performanceNotes: UITextView!
     
     let instrumentKind: InstrumentKind
     
@@ -37,7 +37,7 @@ final class InstructionsViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         layoutInstrumentLabel()
-//        layoutPerformanceNotes()
+        layoutPerformanceNotes()
 //        layoutStartButton()
 //        layoutBackButton()
     }
@@ -56,23 +56,26 @@ final class InstructionsViewController: UIViewController {
         instrumentLabel.textColor = UIColor.lightGrayColor()
         view.addSubview(instrumentLabel)
     }
+    
+    private func layoutPerformanceNotes() {
+        let padding: CGFloat = 50
+        performanceNotes.frame = CGRect(
+            x: padding,
+            y: 100,
+            width: view.frame.width - 2 * padding,
+            height: 400
+        )
+    }
 
     private func createPerformanceNotes() {
-        let padding: CGFloat = 50
-        let textView = UITextView(
-            frame: CGRect(
-                x: padding,
-                y: 100,
-                width: view.frame.width - 2 * padding,
-                height: 400
-            )
-        )
-        textView.font = UIFont(name: "Helvetica", size: 18)
-        textView.backgroundColor = UIColor.blackColor()
-        textView.textAlignment = .Center
-        textView.text = makePerformanceInstructions()
-        textView.textColor = UIColor.whiteColor()
-        view.addSubview(textView)
+        performanceNotes = UITextView()
+        layoutPerformanceNotes()
+        performanceNotes.font = UIFont(name: "Helvetica", size: 18)
+        performanceNotes.backgroundColor = UIColor.blackColor()
+        performanceNotes.textAlignment = .Center
+        performanceNotes.text = makePerformanceInstructions()
+        performanceNotes.textColor = UIColor.whiteColor()
+        view.addSubview(performanceNotes)
     }
     
     private func makePerformanceInstructions() -> String {
