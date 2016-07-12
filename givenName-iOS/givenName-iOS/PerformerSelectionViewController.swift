@@ -41,6 +41,6 @@ extension PerformerSelectionViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let instrumentKind = InstrumentKind.allCases[indexPath.row]
         let viewController = InstructionsViewController(instrumentKind: instrumentKind)
-        showViewController(viewController, sender: self)
+        presentViewController(viewController, animated: false, completion: nil)
     }
 }

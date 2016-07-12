@@ -31,6 +31,19 @@ final class InstructionsViewController: UIViewController {
         view.backgroundColor = UIColor.blackColor()
         createStartButton()
         createBackButton()
+        createPerformanceNotes()
+    }
+    
+    private func createPerformanceNotes() {
+        let width: CGFloat = 500
+        let label = UILabel(
+            frame: CGRect(x: view.frame.midX - 0.5 * width, y: 0, width: width, height: 100)
+        )
+        label.textAlignment = .Center
+        label.font = UIFont(name: "Helvetica", size: 24)
+        label.text = instrumentKind.rawValue
+        label.textColor = UIColor.whiteColor()
+        view.addSubview(label)
     }
     
     private func createStartButton() {
@@ -56,11 +69,11 @@ final class InstructionsViewController: UIViewController {
         let viewController = storyBoard.instantiateViewControllerWithIdentifier(
             "PerformerSelectionViewController"
         )
-        showViewController(viewController, sender: self)
+        presentViewController(viewController, animated: false, completion: nil)
     }
     
     @objc private func showScoreViewController() {
         let viewController = ScoreViewController(instrumentKind: instrumentKind)
-        showViewController(viewController, sender: self)
+        presentViewController(viewController, animated: false, completion: nil)
     }
 }

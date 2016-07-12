@@ -245,6 +245,6 @@ final class ScoreViewController: UIViewController {
     
     @objc private func returnToInstructionsViewController() {
         let viewController = InstructionsViewController(instrumentKind: instrumentKind)
-        showViewController(viewController, sender: self)
+        presentViewController(viewController, animated: false, completion: nil)
     }
 }
