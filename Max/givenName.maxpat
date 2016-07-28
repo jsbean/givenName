@@ -4981,14 +4981,14 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-51" : [ "live.gain~[14]", "live.gain~", 0 ],
+			"obj-53" : [ "live.gain~[15]", "live.gain~", 0 ],
+			"obj-7" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-28" : [ "live.gain~[13]", "live.gain~", 0 ],
 			"obj-74" : [ "live.gain~[9]", "live.gain~", 0 ],
 			"obj-11" : [ "live.gain~[12]", "live.gain~", 0 ],
-			"obj-75" : [ "live.gain~[10]", "live.gain~", 0 ],
 			"obj-76" : [ "live.gain~[11]", "live.gain~", 0 ],
-			"obj-51" : [ "live.gain~[14]", "live.gain~", 0 ],
-			"obj-53" : [ "live.gain~[15]", "live.gain~", 0 ],
-			"obj-7" : [ "live.gain~", "live.gain~", 0 ]
+			"obj-75" : [ "live.gain~[10]", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
