@@ -96,6 +96,15 @@ public final class ProgressBar {
     }
     
     /**
+     Stop the progression.
+     */
+    public func stop() {
+        layer.removeAllAnimations()
+        layer.frame = CGRect(x: origin.x, y: origin.y, width: 0, height: height)
+        isProgressing = false
+    }
+    
+    /**
      Switch from paused or resumed states.
      */
     public func pauseOrResume() {

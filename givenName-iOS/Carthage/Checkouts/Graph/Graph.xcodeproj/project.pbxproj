@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		051E1D907C902CB7A268CCB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDA2066EFEE9F635462FEFC /* Cocoa.framework */; };
-		0737EC7D1D107C3800BFCB3E /* ClefType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737EC7C1D107C3800BFCB3E /* ClefType.swift */; };
-		0737EC7E1D107C3800BFCB3E /* ClefType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737EC7C1D107C3800BFCB3E /* ClefType.swift */; };
 		07A974B31D102B5400EC474B /* GraphType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A974B21D102B5400EC474B /* GraphType.swift */; };
 		07A974B41D102B5400EC474B /* GraphType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A974B21D102B5400EC474B /* GraphType.swift */; };
 		07D84D2C1D1065E50068BDF9 /* LinesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D84D291D1065E50068BDF9 /* LinesCoordinator.swift */; };
@@ -20,6 +18,8 @@
 		07D84D311D1065E50068BDF9 /* LinesSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D84D2B1D1065E50068BDF9 /* LinesSegment.swift */; };
 		07D84D331D1068730068BDF9 /* LinesCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D84D321D1068730068BDF9 /* LinesCoordinatorTests.swift */; };
 		07D84D341D1068730068BDF9 /* LinesCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D84D321D1068730068BDF9 /* LinesCoordinatorTests.swift */; };
+		07E8FAB31D2EB89100324796 /* ClefType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8FAB21D2EB89100324796 /* ClefType.swift */; };
+		07E8FAB41D2EB89100324796 /* ClefType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E8FAB21D2EB89100324796 /* ClefType.swift */; };
 		14832CE5D39FED33697783F1 /* Graph.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3A28E6CB58FEB01F0CDBAEEE /* Graph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		1978215D67C37766C8B869A2 /* Graph.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D2661D92DF71EED3025EFE /* Graph.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C98B03632FF0496FEC3561A /* GraphicsTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D08F3D8398603886EE844A8 /* GraphicsTools.framework */; };
@@ -72,12 +72,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0737EC7C1D107C3800BFCB3E /* ClefType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClefType.swift; sourceTree = "<group>"; };
 		07A974B21D102B5400EC474B /* GraphType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphType.swift; path = Graph/GraphType.swift; sourceTree = "<group>"; };
 		07D84D291D1065E50068BDF9 /* LinesCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinesCoordinator.swift; path = Graph/LinesCoordinator.swift; sourceTree = "<group>"; };
 		07D84D2A1D1065E50068BDF9 /* LinesPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinesPoint.swift; path = Graph/LinesPoint.swift; sourceTree = "<group>"; };
 		07D84D2B1D1065E50068BDF9 /* LinesSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinesSegment.swift; path = Graph/LinesSegment.swift; sourceTree = "<group>"; };
 		07D84D321D1068730068BDF9 /* LinesCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinesCoordinatorTests.swift; path = GraphTests/LinesCoordinatorTests.swift; sourceTree = "<group>"; };
+		07E8FAB21D2EB89100324796 /* ClefType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClefType.swift; path = Graph/ClefType.swift; sourceTree = "<group>"; };
 		0C735868D1AE8BEC5498FFC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = GraphTests/Info.plist; sourceTree = "<group>"; };
 		1D08F3D8398603886EE844A8 /* GraphicsTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsTools.framework; path = Carthage/Build/iOS/GraphicsTools.framework; sourceTree = "<group>"; };
 		2E9482D8C831AFE9D14D212E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Graph/Info.plist; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			children = (
 				C591E8F72FB7F66939C8F212 /* Supporting Files */,
 				07A974B21D102B5400EC474B /* GraphType.swift */,
-				0737EC7C1D107C3800BFCB3E /* ClefType.swift */,
+				07E8FAB21D2EB89100324796 /* ClefType.swift */,
 				07D84D291D1065E50068BDF9 /* LinesCoordinator.swift */,
 				07D84D2A1D1065E50068BDF9 /* LinesPoint.swift */,
 				07D84D2B1D1065E50068BDF9 /* LinesSegment.swift */,
@@ -247,7 +247,6 @@
 				189A0632EEB27214F6D4544A /* Sources */,
 				B7BAA5537ECADD6177DBE210 /* Frameworks */,
 				D8CFC1C80B896CC94FD914E0 /* Headers */,
-				3A93D74213183214AE6F387F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -265,6 +264,7 @@
 				F08E966B5503791BDA94EA8E /* Sources */,
 				C4D0C4B5EB4ED97BFD8F3E66 /* Frameworks */,
 				89F97D7BEBAC7A027707F159 /* CopyFiles */,
+				075EA8F51D327D98007963C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -283,7 +283,6 @@
 				9A47EFAE0B8CB3BE5DCA94E8 /* Sources */,
 				061847411A9D5502B2AFC720 /* Frameworks */,
 				5F1E24C085732AD2469F6332 /* Headers */,
-				3DB6F28E50EA25D482680FDB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -301,6 +300,7 @@
 				3C6BB7DDB19E706E269318D4 /* Sources */,
 				4849F975F9869E2B392EC2B4 /* Frameworks */,
 				EC91065AD88C83FE1AC51FD4 /* CopyFiles */,
+				075EA8F61D327DB1007963C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -342,13 +342,13 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A93D74213183214AE6F387F /* ShellScript */ = {
+		075EA8F51D327D98007963C0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTools.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GraphicsTools.framework",
 			);
 			outputPaths = (
 			);
@@ -356,13 +356,13 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		3DB6F28E50EA25D482680FDB /* ShellScript */ = {
+		075EA8F61D327DB1007963C0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/GraphicsTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTools.framework",
 			);
 			outputPaths = (
 			);
@@ -378,7 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D84D2D1D1065E50068BDF9 /* LinesCoordinator.swift in Sources */,
-				0737EC7E1D107C3800BFCB3E /* ClefType.swift in Sources */,
+				07E8FAB41D2EB89100324796 /* ClefType.swift in Sources */,
 				07A974B41D102B5400EC474B /* GraphType.swift in Sources */,
 				07D84D2F1D1065E50068BDF9 /* LinesPoint.swift in Sources */,
 				07D84D311D1065E50068BDF9 /* LinesSegment.swift in Sources */,
@@ -398,7 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07D84D2C1D1065E50068BDF9 /* LinesCoordinator.swift in Sources */,
-				0737EC7D1D107C3800BFCB3E /* ClefType.swift in Sources */,
+				07E8FAB31D2EB89100324796 /* ClefType.swift in Sources */,
 				07A974B31D102B5400EC474B /* GraphType.swift in Sources */,
 				07D84D2E1D1065E50068BDF9 /* LinesPoint.swift in Sources */,
 				07D84D301D1065E50068BDF9 /* LinesSegment.swift in Sources */,
@@ -441,7 +441,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Graph/Info.plist;
@@ -464,6 +465,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = GraphTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -481,6 +483,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = GraphTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -495,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = GraphTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -516,7 +520,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -547,7 +551,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -606,7 +610,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Graph/Info.plist;
@@ -666,6 +671,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = GraphTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;

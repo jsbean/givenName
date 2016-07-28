@@ -8,14 +8,12 @@
 
 import AppKit
 import Timeline
+import ProgressBar
 import Pitch
 import PitchSpellingTools
-import ProgressBar
 import Staff
 
 // Buttons:
-// Back button (-> InstructionsViewController)
-// Pause button (-> pauseTimeline)
 // Skip forward button (-> try timeline.jump(amount: Seconds))
 // Skip backward button (-> try timeline.jump(amount: Seconds))
 
@@ -29,7 +27,7 @@ final class ScoreViewController: NSViewController {
     var pauseResumeButton: NSButton!
     var progressBar: ProgressBar!
     
-    var isPaused: Bool = false
+//    var isPaused: Bool = false
 
     // Music notational elements
     var staff: StaffLayer = StaffLayer(identifier: "staff", staffSpaceHeight: 20)
@@ -78,7 +76,7 @@ final class ScoreViewController: NSViewController {
             self.addEvent(to: t, withPitch: 58, from: 2.5 * 60, to: 3.333 * 60)
             t.add(at: 3.333 * 60) { self.progressBar.start(for: (3.666 - 3.333) * 60 ) }
             self.addEvent(to: t, withPitch: 58, from: 3.666 * 60, to: 4.5 * 60)
-            t.add(at: 3.666 * 60) { self.progressBar.start(for: (6.666 - 3.666) * 60 ) }
+            t.add(at: 3.666 * 60) { self.progressBar.start(for: (6.666 - 4.5) * 60 ) }
             
             // 2nd half
             self.addEvent(to: t, withPitch: 78, from: 6.666 * 60, to: 7.5 * 60)
@@ -173,22 +171,22 @@ final class ScoreViewController: NSViewController {
         backButton.frame.origin = CGPoint.zero
     }
     
-    private func addRandomPitchToStaff() {
-        let staff = makeStaff() // ensure clean staff
-        let pitch = Pitch.random()
-        let transposition = instrumentKind.transposition
-        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch.noteNumber.value + transposition))
-        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
-        let event = StaffEvent(
-            staffSpaceHeight: 20,
-            representablePitchCollection: StaffRepresentablePitchCollection(
-                [
-                    StaffRepresentablePitchContext(spelledPitch)!
-                ]
-            )
-        )
-        staff.addEvent(event, at: 100)
-    }
+//    private func addRandomPitchToStaff() {
+//        let staff = makeStaff() // ensure clean staff
+//        let pitch = Pitch.random()
+//        let transposition = instrumentKind.transposition
+//        let transposedPitch = Pitch(noteNumber: NoteNumber(pitch.noteNumber.value + transposition))
+//        let spelledPitch = try! transposedPitch.spelledWithDefaultSpelling()
+//        let event = StaffEvent(
+//            staffSpaceHeight: 20,
+//            representablePitchCollection: StaffRepresentablePitchCollection(
+//                [
+//                    StaffRepresentablePitchContext(spelledPitch)!
+//                ]
+//            )
+//        )
+//        staff.addEvent(event, at: 100)
+//    }
     
     private func show(pitch pitch: Float) {
         let staff = makeStaff() // ensure clean staff
@@ -222,7 +220,13 @@ final class ScoreViewController: NSViewController {
         }
     }
     
-    private func addEvent(to timeline: Timeline, withPitch pitch: Float, from start: Seconds, to end: Seconds) {
+    private func addEvent(
+        to timeline: Timeline,
+        withPitch pitch: Float,
+        from start: Seconds,
+        to end: Seconds
+    )
+    {
         timeline.add(at: start) { self.show(pitch: pitch) }
         timeline.add(at: start) { self.progressBar.start(for: end - start) }
         timeline.add(at: end) { self.hideStaff() }

@@ -1,1 +1,1 @@
-github "dn-m/GraphicsTools"
+github "dn-m/GraphicsTools" "no-contains-swift-code"

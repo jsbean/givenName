@@ -587,7 +587,6 @@
 				E5A48AB829CA16B0EA09C887 /* Sources */,
 				95F7A94860786BAD7BC79785 /* Frameworks */,
 				E77B60086B9064E0C3027730 /* Headers */,
-				FFAE9742B5CC138A03A00840 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -605,6 +604,7 @@
 				B633BCDBA5011AD60DC0A7E2 /* Sources */,
 				A5E599062EBF9EA2364BF9CD /* Frameworks */,
 				B1AABFFA0588527C08E21CAD /* CopyFiles */,
+				075EA8FA1D32875D007963C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -623,6 +623,7 @@
 				84156D60FF96811AAC7C074F /* Sources */,
 				64A454F10FB1C925B638FE02 /* Frameworks */,
 				EB9D2460F8A50BEAD064643A /* CopyFiles */,
+				075EA8F91D3286A1007963C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -641,7 +642,6 @@
 				8E40200A1BAFB5A56B335771 /* Sources */,
 				6EECCDF7A63ABCB826F8E149 /* Frameworks */,
 				CCCA5D1D0C3A0DA450CD386D /* Headers */,
-				A07C4311FAA58D8BB8DDD007 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -682,33 +682,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A07C4311FAA58D8BB8DDD007 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/ArrayTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/DictionaryTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/EnsembleTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/EnumTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Graph.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Pitch.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/PitchSpellingTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/StringTools.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/TreeTools.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		FFAE9742B5CC138A03A00840 /* ShellScript */ = {
+		075EA8F91D3286A1007963C0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -727,6 +701,32 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PitchSpellingTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/StringTools.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/TreeTools.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		075EA8FA1D32875D007963C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/ArithmeticTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/ArrayTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Color.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/DictionaryTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/EnsembleTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/EnumTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Graph.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/GraphicsTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PathTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/Pitch.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/PitchSpellingTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/StringTools.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/TreeTools.framework",
 			);
 			outputPaths = (
 			);
@@ -927,6 +927,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -977,6 +978,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1001,7 +1003,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Staff/Info.plist;
@@ -1031,7 +1034,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -1054,6 +1057,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1075,6 +1079,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1101,7 +1106,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -1129,7 +1134,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Staff/Info.plist;

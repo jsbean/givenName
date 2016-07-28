@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0733E9F51D1BE8F500FDDE97 /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E9F41D1BE8F500FDDE97 /* TimelineTests.swift */; };
 		0733E9F61D1BE8F500FDDE97 /* TimelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0733E9F41D1BE8F500FDDE97 /* TimelineTests.swift */; };
+		074B58121D2288AB00215565 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B58111D2288AB00215565 /* ActionType.swift */; };
+		074B58131D2288AB00215565 /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074B58111D2288AB00215565 /* ActionType.swift */; };
+		07F63AA41D208A9900C7FB22 /* DictionaryTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A050C632E1221F2A36491428 /* DictionaryTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07F739041D1AB4C800F83AE8 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F738FD1D1AB4C800F83AE8 /* Timeline.swift */; };
 		07F739051D1AB4C800F83AE8 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F738FD1D1AB4C800F83AE8 /* Timeline.swift */; };
 		4CDD7BB1493FFCC588FE8E74 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5DCC098392100ECC36114D7 /* ArithmeticTools.framework */; };
@@ -45,6 +48,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		07F63AA31D208A9200C7FB22 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07F63AA41D208A9900C7FB22 /* DictionaryTools.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD1A1A7AB977F27AD053054F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,18 +70,19 @@
 		};
 		F567A06A56238FC4067B46BA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
 				581414A189A131EC6CB6E7FC /* Timeline.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0733E9F41D1BE8F500FDDE97 /* TimelineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimelineTests.swift; path = TimelineTests/TimelineTests.swift; sourceTree = "<group>"; };
+		074B58111D2288AB00215565 /* ActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionType.swift; path = Timeline/ActionType.swift; sourceTree = "<group>"; };
 		07F738FD1D1AB4C800F83AE8 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Timeline/Timeline.swift; sourceTree = "<group>"; };
 		2A9280607A024DC801DF42E1 /* Timeline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Timeline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB43C733D9565FF2DC2E4E /* DictionaryTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DictionaryTools.framework; path = Carthage/Build/Mac/DictionaryTools.framework; sourceTree = "<group>"; };
@@ -135,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				07F738FD1D1AB4C800F83AE8 /* Timeline.swift */,
+				074B58111D2288AB00215565 /* ActionType.swift */,
 				B3EF3CD3DD68C6E9E54C7872 /* Supporting Files */,
 			);
 			name = Timeline;
@@ -247,6 +262,8 @@
 				CFAB3D37FDF052EDF5C5CF2E /* Sources */,
 				80FA5A82C4C74F64C5D06C84 /* Frameworks */,
 				F567A06A56238FC4067B46BA /* CopyFiles */,
+				07F63AA31D208A9200C7FB22 /* CopyFiles */,
+				07F63AA51D208B3700C7FB22 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -265,7 +282,6 @@
 				81104746972437C172793470 /* Sources */,
 				CC7DB75BF9CA8A1BFAC4C12F /* Frameworks */,
 				5980498FCF4D7E44F0CA0C60 /* Headers */,
-				9CC312DB86CD59BC2A36D7AF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -283,6 +299,7 @@
 				83084EEE15161FB760381C76 /* Sources */,
 				E5DF93615C31A98996EB2795 /* Frameworks */,
 				DD1A1A7AB977F27AD053054F /* CopyFiles */,
+				075EA8F01D327BD8007963C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -301,7 +318,6 @@
 				12CC7479DFE9A481B2BF6D39 /* Sources */,
 				14F3EAAC58C0FD506AC01AE1 /* Frameworks */,
 				D621D2F3BA3592E731A14F59 /* Headers */,
-				DBD3A193E64ECBEF630C496B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -342,7 +358,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9CC312DB86CD59BC2A36D7AF /* ShellScript */ = {
+		075EA8F01D327BD8007963C0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,7 +374,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		DBD3A193E64ECBEF630C496B /* ShellScript */ = {
+		07F63AA51D208B3700C7FB22 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -382,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F739041D1AB4C800F83AE8 /* Timeline.swift in Sources */,
+				074B58121D2288AB00215565 /* ActionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F739051D1AB4C800F83AE8 /* Timeline.swift in Sources */,
+				074B58131D2288AB00215565 /* ActionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,9 +451,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = TimelineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,7 +470,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TimelineTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -461,14 +489,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -565,13 +593,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Timeline/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.Timeline;
 				PRODUCT_NAME = Timeline;
@@ -588,7 +617,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -596,7 +625,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				FRAMEWORK_VERSION = A;
@@ -624,13 +653,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Timeline/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.Timeline;
 				PRODUCT_NAME = Timeline;
@@ -647,9 +677,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = TimelineTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/Mac";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -662,7 +697,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TimelineTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
